@@ -74,7 +74,7 @@
 
     <link name='AxialLeftShoulder_link'>
       <pose>0 0.084 -0.329 0 -0 0</pose>
-      <inertial>
+      <!--<inertial>
         <pose>-0.000172 0.000249 0.100649 0 -0 0</pose>
         <mass>1</mass>
         <inertia>
@@ -85,7 +85,7 @@
           <iyz>0.0000397</iyz>
           <izz>0.000611796</izz>
         </inertia>
-      </inertial>
+      </inertial>-->
       <visual name='AxialLeftShoulder_visual'>
         <geometry>
           <mesh>
