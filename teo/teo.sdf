@@ -55,7 +55,7 @@
       <uri>model://teo/leftLeg</uri>
     </include>
 
-    <pose>0 0 0.845005 0 -0 0</pose>
+    <pose>0 0 0.845 0 -0 0</pose>
 
   </model>
 </sdf>

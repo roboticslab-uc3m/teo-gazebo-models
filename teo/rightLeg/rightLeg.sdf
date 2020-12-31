@@ -212,6 +212,36 @@
       </axis>
     </joint>
 
+    <link name='RightFoot_link'>
+      <pose>0.0525 0.0175 -0.84 0 -0 0</pose>
+      <collision name='RightFoot_collision'>
+        <geometry>
+          <box>
+            <size>0.245 0.14 0.01</size>
+          </box>
+        </geometry>
+        <max_contacts>4</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>18000000</kp>
+              <kd>100</kd>
+              <max_vel>100</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+
+    <joint name='RightFoot' type='fixed'>
+      <parent>teo_rightLeg::SagittalRightAnkle_link</parent>
+      <child>teo_rightLeg::RightFoot_link</child>
+    </joint>
+
     <plugin name='controlboard_rightLeg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightLeg.ini</yarpConfigurationFile>
     </plugin>
