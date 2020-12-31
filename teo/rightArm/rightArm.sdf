@@ -1,0 +1,148 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='teo_rightArm'>
+
+    <link name='FrontalRightShoulder_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <visual name='FrontalRightShoulder_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightShoulder.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightShoulder' type='revolute'>
+      <parent>teo_trunk::FrontalWaist_link</parent>
+      <child>teo_rightArm::FrontalRightShoulder_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.71</lower>
+          <upper>1.85</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='SagittalRightShoulder_link'>
+      <pose>0 -0.084 0 0 -0 0</pose>
+      <visual name='SagittalRightShoulder_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/SagittalRightShoulder.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='SagittalRightShoulder' type='revolute'>
+      <parent>teo_rightArm::FrontalRightShoulder_link</parent>
+      <child>teo_rightArm::SagittalRightShoulder_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.32</lower>
+          <upper>0.39</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='AxialRightShoulder_link'>
+      <pose>0 -0.084 -0.329 0 -0 0</pose>
+      <visual name='AxialRightShoulder_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/AxialRightShoulder.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='AxialRightShoulder' type='revolute'>
+      <parent>teo_rightArm::SagittalRightShoulder_link</parent>
+      <child>teo_rightArm::AxialRightShoulder_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.4</lower>
+          <upper>0.99</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalRightElbow_link'>
+      <pose>0 -0.084 -0.329 0 -0 0</pose>
+      <visual name='FrontalRightElbow_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightElbow.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightElbow' type='revolute'>
+      <parent>teo_rightArm::AxialRightShoulder_link</parent>
+      <child>teo_rightArm::FrontalRightElbow_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.74</lower>
+          <upper>1.72</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='AxialRightWrist_link'>
+      <pose>0 -0.084 -0.531 0 -0 0</pose>
+      <visual name='AxialRightWrist_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/AxialRightWrist.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='AxialRightWrist' type='revolute'>
+      <parent>teo_rightArm::FrontalRightElbow_link</parent>
+      <child>teo_rightArm::AxialRightWrist_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.4</lower>
+          <upper>1.74</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalRightWrist_link'>
+      <pose>0 -0.084 -0.531 0 -0 0</pose>
+      <visual name='FrontalRightWrist_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightWrist.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightWrist' type='revolute'>
+      <parent>teo_rightArm::AxialRightWrist_link</parent>
+      <child>teo_rightArm::FrontalRightWrist_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.01</lower>
+          <upper>0.78</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <plugin name='controlboard_rightArm' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightArm.ini</yarpConfigurationFile>
+    </plugin>
+
+  </model>
+</sdf>

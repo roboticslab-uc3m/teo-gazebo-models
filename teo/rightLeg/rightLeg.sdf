@@ -1,0 +1,148 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='teo_rightLeg'>
+
+    <link name='AxialRightHip_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <visual name='AxialRightHip_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/AxialRightHip.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='AxialRightHip' type='revolute'>
+      <parent>teo::RootWaist_links</parent>
+      <child>teo_rightLeg::AxialRightHip_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.57</lower>
+          <upper>0.49</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='SagittalRightHip_link'>
+      <pose>0 0 -0.092 0 -0 0</pose>
+      <visual name='SagittalRightHip_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/SagittalRightHip.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='SagittalRightHip' type='revolute'>
+      <parent>teo_rightLeg::AxialRightHip_link</parent>
+      <child>teo_rightLeg::SagittalRightHip_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.25</lower>
+          <upper>0.22</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalRightHip_link'>
+      <pose>0 0 -0.092 0 -0 0</pose>
+      <visual name='FrontalRightHip_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightHip.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightHip' type='revolute'>
+      <parent>teo_rightLeg::SagittalRightHip_link</parent>
+      <child>teo_rightLeg::FrontalRightHip_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.55</lower>
+          <upper>0.74</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalRightKnee_link'>
+      <pose>0 0 -0.33 0 -0 0</pose>
+      <visual name='FrontalRightKnee_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightKnee.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightKnee' type='revolute'>
+      <parent>teo_rightLeg::FrontalRightHip_link</parent>
+      <child>teo_rightLeg::FrontalRightKnee_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.07</lower>
+          <upper>1.44</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalRightAnkle_link'>
+      <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <visual name='FrontalRightAnkle_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalRightAnkle.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalRightAnkle' type='revolute'>
+      <parent>teo_rightLeg::FrontalRightKnee_link</parent>
+      <child>teo_rightLeg::FrontalRightAnkle_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.4</lower>
+          <upper>0.44</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='SagittalRightAnkle_link'>
+      <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <visual name='FrontalRightAnkle_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/SagittalRightAnkle.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='SagittalRightAnkle' type='revolute'>
+      <parent>teo_rightLeg::FrontalRightAnkle_link</parent>
+      <child>teo_rightLeg::SagittalRightAnkle_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.35</lower>
+          <upper>0.74</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <plugin name='controlboard_rightLeg' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightLeg.ini</yarpConfigurationFile>
+    </plugin>
+
+  </model>
+</sdf>

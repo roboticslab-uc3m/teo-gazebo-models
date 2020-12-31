@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='teo_head'>
+
+    <link name='AxialNeck_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <visual name='AxialNeck_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/AxialNeck.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='AxialNeck' type='revolute'>
+      <parent>teo_trunk::FrontalWaist_link</parent>
+      <child>teo_head::AxialNeck_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.22</lower>
+          <upper>1.22</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalNeck_link'>
+      <pose>0 0 0.0325 0 -0 0</pose>
+      <visual name='FrontalNeck_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/FrontalNeck.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalNeck' type='revolute'>
+      <parent>teo_head::AxialNeck_link</parent>
+      <child>teo_head::FrontalNeck_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.51</lower>
+          <upper>0.15</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <plugin name='controlboard_head' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://teo/conf/gazebo_teo_head.ini</yarpConfigurationFile>
+    </plugin>
+
+  </model>
+</sdf>

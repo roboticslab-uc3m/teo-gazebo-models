@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='teo_trunk'>
+
+    <link name='AxialWaist_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <visual name='AxialWaist_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/AxialWaist.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='AxialWaist' type='revolute'>
+      <parent>teo::RootWaist_links</parent>
+      <child>teo_trunk::AxialWaist_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.03</lower>
+          <upper>0.81</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <link name='FrontalWaist_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <visual name='FrontalWaist_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/daes/RootWaist.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='FrontalWaist' type='revolute'>
+      <parent>teo_trunk::AxialWaist_link</parent>
+      <child>teo_trunk::FrontalWaist_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.58</lower>
+          <upper>0.18</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <plugin name='controlboard_trunk' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://teo/conf/gazebo_teo_trunk.ini</yarpConfigurationFile>
+    </plugin>
+
+  </model>
+</sdf>
