@@ -4,6 +4,18 @@
 
     <link name='AxialWaist_link'>
       <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.002235 -0.000979 -0.018814 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.001977587</ixx>
+          <ixy>0.00000206</ixy>
+          <ixz>0.0000297</ixz>
+          <iyy>0.000899729</iyy>
+          <iyz>-0.00000307</iyz>
+          <izz>0.001471749</izz>
+        </inertia>
+      </inertial>
       <visual name='AxialWaist_visual'>
         <geometry>
           <mesh>
@@ -27,6 +39,18 @@
 
     <link name='FrontalWaist_link'>
       <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.032985 -0.007876 0.220667 0 -0 0</pose>
+        <mass>14.23545</mass>
+        <inertia>
+          <ixx>0.33566514</ixx>
+          <ixy>0.000162127</ixy>
+          <ixz>0.011858221</ixz>
+          <iyy>0.126531585</iyy>
+          <iyz>0.000914091</iyz>
+          <izz>0.263359225</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalWaist_visual'>
         <geometry>
           <mesh>

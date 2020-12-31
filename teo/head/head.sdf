@@ -4,6 +4,18 @@
 
     <link name='AxialNeck_link'>
       <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000302 0.000193 -0.0452 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.000939063</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000939063</iyy>
+          <iyz>0</iyz>
+          <izz>0.000528125</izz>
+        </inertia>
+      </inertial>
       <visual name='AxialNeck_visual'>
         <geometry>
           <mesh>
@@ -27,6 +39,18 @@
 
     <link name='FrontalNeck_link'>
       <pose>0 0 0.0325 0 -0 0</pose>
+      <inertial>
+        <pose>-0.002729 -0.000086 0.067027 0 -0 0</pose>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.007599322</ixx>
+          <ixy>5.83e-09</ixy>
+          <ixz>0.0000658</ixz>
+          <iyy>0.008325273</iyy>
+          <iyz>-7.43e-09</iyz>
+          <izz>0.011403464</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalNeck_visual'>
         <geometry>
           <mesh>

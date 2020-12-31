@@ -4,6 +4,18 @@
 
     <link name='FrontalLeftShoulder_link'>
       <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.002272 0.056186 0.008165 0 -0 0</pose>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.004226791</ixx>
+          <ixy>-0.0000855</ixy>
+          <ixz>-0.0000117</ixz>
+          <iyy>0.00212734</iyy>
+          <iyz>0.000280493</iyz>
+          <izz>0.00409322</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalLeftShoulder_visual'>
         <geometry>
           <mesh>
@@ -27,6 +39,18 @@
 
     <link name='SagittalLeftShoulder_link'>
       <pose>0 0.084 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.008047 0.004937 -0.027619 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.001610921</ixx>
+          <ixy>0.000069</ixy>
+          <ixz>-0.000214885</ixz>
+          <iyy>0.002187768</iyy>
+          <iyz>-0.000163004</iyz>
+          <izz>0.001173531</izz>
+        </inertia>
+      </inertial>
       <visual name='SagittalLeftShoulder_visual'>
         <geometry>
           <mesh>
@@ -50,6 +74,18 @@
 
     <link name='AxialLeftShoulder_link'>
       <pose>0 0.084 -0.329 0 -0 0</pose>
+      <inertial>
+        <pose>-0.000172 0.000249 0.100649 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.006925108</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.006741634</iyy>
+          <iyz>0.0000397</iyz>
+          <izz>0.000611796</izz>
+        </inertia>
+      </inertial>
       <visual name='AxialLeftShoulder_visual'>
         <geometry>
           <mesh>
@@ -73,6 +109,18 @@
 
     <link name='FrontalLeftElbow_link'>
       <pose>0 0.084 -0.329 0 -0 0</pose>
+      <inertial>
+        <pose>0.000287 -0.000116 -0.053185 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.002590029</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00262307</iyy>
+          <iyz>0</iyz>
+          <izz>0.000446024</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalLeftElbow_visual'>
         <geometry>
           <mesh>
@@ -96,6 +144,18 @@
 
     <link name='AxialLeftWrist_link'>
       <pose>0 0.084 -0.531 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001151 0.000603 0.02464 0 -0 0</pose>
+        <mass>0.63149</mass>
+        <inertia>
+          <ixx>0.000701463</ixx>
+          <ixy>-0.0000105</ixy>
+          <ixz>-0.0000109</ixz>
+          <iyy>0.000612806</iyy>
+          <iyz>0.0000115</iyz>
+          <izz>0.000326949</izz>
+        </inertia>
+      </inertial>
       <visual name='AxialLeftWrist_visual'>
         <geometry>
           <mesh>
@@ -119,6 +179,18 @@
 
     <link name='FrontalLeftWrist_link'>
       <pose>0 0.084 -0.531 0 -0 0</pose>
+      <inertial>
+        <pose>-0.002314 0.00007 -0.108635 0 -0 0</pose>
+        <mass>1.17</mass>
+        <inertia>
+          <ixx>0.005330647</ixx>
+          <ixy>0.000000128</ixy>
+          <ixz>0.000100487</ixz>
+          <iyy>0.005345282</iyy>
+          <iyz>-0.00000807</iyz>
+          <izz>0.000882489</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalLeftWrist_visual'>
         <geometry>
           <mesh>

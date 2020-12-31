@@ -4,6 +4,18 @@
 
     <link name='AxialRightHip_link'>
       <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000089 -0.000389 -0.065985 0 -0 0</pose>
+        <mass>0.84945</mass>
+        <inertia>
+          <ixx>0.001564202</ixx>
+          <ixy>0</ixy>
+          <ixz>0.0000025</ixz>
+          <iyy>0.002645089</iyy>
+          <iyz>0</iyz>
+          <izz>0.001706349</izz>
+        </inertia>
+      </inertial>
       <visual name='AxialRightHip_visual'>
         <geometry>
           <mesh>
@@ -27,6 +39,18 @@
 
     <link name='SagittalRightHip_link'>
       <pose>0 0 -0.092 0 -0 0</pose>
+      <inertial>
+        <pose>-0.000636 0.001058 0.000349 0 -0 0</pose>
+        <mass>1.45459</mass>
+        <inertia>
+          <ixx>0.001545815</ixx>
+          <ixy>-0.00000297</ixy>
+          <ixz>-4.07e-09</ixz>
+          <iyy>0.00119159</iyy>
+          <iyz>9.16e-09</iyz>
+          <izz>0.002270482</izz>
+        </inertia>
+      </inertial>
       <visual name='SagittalRightHip_visual'>
         <geometry>
           <mesh>
@@ -50,6 +74,18 @@
 
     <link name='FrontalRightHip_link'>
       <pose>0 0 -0.092 0 -0 0</pose>
+      <inertial>
+        <pose>-0.010862 -0.000006 -0.161205 0 -0 0</pose>
+        <mass>1.89152</mass>
+        <inertia>
+          <ixx>0.015077735</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.000442074</ixz>
+          <iyy>0.015112044</iyy>
+          <iyz>0</iyz>
+          <izz>0.00747346</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalRightHip_visual'>
         <geometry>
           <mesh>
@@ -73,6 +109,18 @@
 
     <link name='FrontalRightKnee_link'>
       <pose>0 0 -0.33 0 -0 0</pose>
+      <inertial>
+        <pose>-0.006614 -0.000411 -0.146413 0 -0 0</pose>
+        <mass>1.94824</mass>
+        <inertia>
+          <ixx>0.02186171</ixx>
+          <ixy>0</ixy>
+          <ixz>0.00000316</ixz>
+          <iyy>0.021411109</iyy>
+          <iyz>0</iyz>
+          <izz>0.003843636</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalRightKnee_visual'>
         <geometry>
           <mesh>
@@ -96,6 +144,18 @@
 
     <link name='FrontalRightAnkle_link'>
       <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <inertial>
+        <pose>0.002577 -0.013536 0.000182 0 -0 0</pose>
+        <mass>1.50359</mass>
+        <inertia>
+          <ixx>0.001395488</ixx>
+          <ixy>0.00000685</ixy>
+          <ixz>1e-11</ixz>
+          <iyy>0.001589358</iyy>
+          <iyz>0</iyz>
+          <izz>0.002418657</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalRightAnkle_visual'>
         <geometry>
           <mesh>
@@ -119,6 +179,18 @@
 
     <link name='SagittalRightAnkle_link'>
       <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <inertial>
+        <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
+        <mass>3.1334</mass>
+        <inertia>
+          <ixx>0.00774203</ixx>
+          <ixy>0.000455866</ixy>
+          <ixz>-0.001851657</ixz>
+          <iyy>0.014781323</iyy>
+          <iyz>-0.000147513</iyz>
+          <izz>0.013361748</izz>
+        </inertia>
+      </inertial>
       <visual name='FrontalRightAnkle_visual'>
         <geometry>
           <mesh>
