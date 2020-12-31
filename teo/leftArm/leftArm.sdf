@@ -19,7 +19,7 @@
       <visual name='FrontalLeftShoulder_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftShoulder.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftShoulder.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -54,7 +54,7 @@
       <visual name='SagittalLeftShoulder_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/SagittalLeftShoulder.dae</uri>
+            <uri>model://teo/meshes/visual/SagittalLeftShoulder.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -89,7 +89,7 @@
       <visual name='AxialLeftShoulder_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/AxialLeftShoulder.dae</uri>
+            <uri>model://teo/meshes/visual/AxialLeftShoulder.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -124,7 +124,7 @@
       <visual name='FrontalLeftElbow_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftElbow.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftElbow.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -159,7 +159,7 @@
       <visual name='AxialLeftWrist_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/AxialLeftWrist.dae</uri>
+            <uri>model://teo/meshes/visual/AxialLeftWrist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -194,7 +194,7 @@
       <visual name='FrontalLeftWrist_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftWrist.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftWrist.dae</uri>
           </mesh>
         </geometry>
       </visual>

@@ -19,7 +19,7 @@
       <visual name='AxialLeftHip_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/AxialLeftHip.dae</uri>
+            <uri>model://teo/meshes/visual/AxialLeftHip.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -54,7 +54,7 @@
       <visual name='SagittalLeftHip_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/SagittalLeftHip.dae</uri>
+            <uri>model://teo/meshes/visual/SagittalLeftHip.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -89,7 +89,7 @@
       <visual name='FrontalLeftHip_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftHip.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftHip.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -124,7 +124,7 @@
       <visual name='FrontalLeftKnee_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftKnee.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftKnee.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -159,7 +159,7 @@
       <visual name='FrontalLeftAnkle_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalLeftAnkle.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalLeftAnkle.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -194,7 +194,7 @@
       <visual name='SagittalLeftAnkle_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/SagittalLeftAnkle.dae</uri>
+            <uri>model://teo/meshes/visual/SagittalLeftAnkle.dae</uri>
           </mesh>
         </geometry>
       </visual>

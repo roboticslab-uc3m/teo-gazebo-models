@@ -19,7 +19,7 @@
       <visual name='AxialNeck_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/AxialNeck.dae</uri>
+            <uri>model://teo/meshes/visual/AxialNeck.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -54,7 +54,7 @@
       <visual name='FrontalNeck_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/FrontalNeck.dae</uri>
+            <uri>model://teo/meshes/visual/FrontalNeck.dae</uri>
           </mesh>
         </geometry>
       </visual>

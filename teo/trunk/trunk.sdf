@@ -19,7 +19,7 @@
       <visual name='AxialWaist_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/AxialWaist.dae</uri>
+            <uri>model://teo/meshes/visual/AxialWaist.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -54,7 +54,7 @@
       <visual name='FrontalWaist_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/RootWaist.dae</uri>
+            <uri>model://teo/meshes/visual/RootWaist.dae</uri>
           </mesh>
         </geometry>
       </visual>

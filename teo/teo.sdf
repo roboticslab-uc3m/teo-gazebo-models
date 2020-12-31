@@ -19,7 +19,7 @@
       <visual name='RootWaist_links_visual'>
         <geometry>
           <mesh>
-            <uri>model://teo/daes/RootWaist_links.dae</uri>
+            <uri>model://teo/meshes/visual/RootWaist_links.dae</uri>
           </mesh>
         </geometry>
       </visual>
