@@ -108,7 +108,7 @@
     </joint>
 
     <link name='FrontalRightKnee_link'>
-      <pose>0 0 -0.33 0 -0 0</pose>
+      <pose>0 0 -0.422 0 -0 0</pose>
       <inertial>
         <pose>-0.006614 -0.000411 -0.146413 0 -0 0</pose>
         <mass>1.94824</mass>
@@ -143,7 +143,7 @@
     </joint>
 
     <link name='FrontalRightAnkle_link'>
-      <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <pose>0 0.0175 -0.722 0 -0 0</pose>
       <inertial>
         <pose>0.002577 -0.013536 0.000182 0 -0 0</pose>
         <mass>1.50359</mass>
@@ -178,7 +178,7 @@
     </joint>
 
     <link name='SagittalRightAnkle_link'>
-      <pose>0 0.0175 -0.63 0 -0 0</pose>
+      <pose>0 0.0175 -0.722 0 -0 0</pose>
       <inertial>
         <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
         <mass>3.1334</mass>

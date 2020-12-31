@@ -55,9 +55,7 @@
       <uri>model://teo/leftLeg</uri>
     </include>
 
-    <static>0</static>
-    <enable_wind>0</enable_wind>
-    <pose>0 0 0 0 -0 0</pose>
+    <pose>0 0 0.845005 0 -0 0</pose>
 
   </model>
 </sdf>
