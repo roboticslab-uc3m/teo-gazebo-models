@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='teo_trunk'>
+  <model name='TEO_trunk'>
 
     <link name='AxialWaist_link'>
       <pose>0 0 0 0 -0 0</pose>
@@ -26,8 +26,8 @@
     </link>
 
     <joint name='AxialWaist' type='revolute'>
-      <parent>teo::RootWaist_links</parent>
-      <child>teo_trunk::AxialWaist_link</child>
+      <parent>TEO::RootWaist_links</parent>
+      <child>TEO_trunk::AxialWaist_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -61,8 +61,8 @@
     </link>
 
     <joint name='FrontalWaist' type='revolute'>
-      <parent>teo_trunk::AxialWaist_link</parent>
-      <child>teo_trunk::FrontalWaist_link</child>
+      <parent>TEO_trunk::AxialWaist_link</parent>
+      <child>TEO_trunk::FrontalWaist_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>

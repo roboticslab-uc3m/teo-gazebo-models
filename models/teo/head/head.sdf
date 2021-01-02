@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='teo_head'>
+  <model name='TEO_head'>
 
     <link name='AxialNeck_link'>
       <pose>0 0 0 0 -0 0</pose>
@@ -26,8 +26,8 @@
     </link>
 
     <joint name='AxialNeck' type='revolute'>
-      <parent>teo_trunk::FrontalWaist_link</parent>
-      <child>teo_head::AxialNeck_link</child>
+      <parent>TEO_trunk::FrontalWaist_link</parent>
+      <child>TEO_head::AxialNeck_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -89,8 +89,8 @@
     </link>
 
     <joint name='FrontalNeck' type='revolute'>
-      <parent>teo_head::AxialNeck_link</parent>
-      <child>teo_head::FrontalNeck_link</child>
+      <parent>TEO_head::AxialNeck_link</parent>
+      <child>TEO_head::FrontalNeck_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>

@@ -12,7 +12,7 @@
 
     <include>
       <pose>0 0 0.05 0 -0 0</pose>
-      <uri>model://teo/fixed</uri>
+      <uri>model://teo_fixed</uri>
     </include>
    
   </world>

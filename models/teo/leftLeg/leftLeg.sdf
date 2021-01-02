@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='teo_leftLeg'>
+  <model name='TEO_leftLeg'>
 
     <link name='AxialLeftHip_link'>
       <pose>0 0 0 0 -0 0</pose>
@@ -26,8 +26,8 @@
     </link>
 
     <joint name='AxialLeftHip' type='revolute'>
-      <parent>teo::RootWaist_links</parent>
-      <child>teo_leftLeg::AxialLeftHip_link</child>
+      <parent>TEO::RootWaist_links</parent>
+      <child>TEO_leftLeg::AxialLeftHip_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -61,8 +61,8 @@
     </link>
 
     <joint name='SagittalLeftHip' type='revolute'>
-      <parent>teo_leftLeg::AxialLeftHip_link</parent>
-      <child>teo_leftLeg::SagittalLeftHip_link</child>
+      <parent>TEO_leftLeg::AxialLeftHip_link</parent>
+      <child>TEO_leftLeg::SagittalLeftHip_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -96,8 +96,8 @@
     </link>
 
     <joint name='FrontalLeftHip' type='revolute'>
-      <parent>teo_leftLeg::SagittalLeftHip_link</parent>
-      <child>teo_leftLeg::FrontalLeftHip_link</child>
+      <parent>TEO_leftLeg::SagittalLeftHip_link</parent>
+      <child>TEO_leftLeg::FrontalLeftHip_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -131,8 +131,8 @@
     </link>
 
     <joint name='FrontalLeftKnee' type='revolute'>
-      <parent>teo_leftLeg::FrontalLeftHip_link</parent>
-      <child>teo_leftLeg::FrontalLeftKnee_link</child>
+      <parent>TEO_leftLeg::FrontalLeftHip_link</parent>
+      <child>TEO_leftLeg::FrontalLeftKnee_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -166,8 +166,8 @@
     </link>
 
     <joint name='FrontalLeftAnkle' type='revolute'>
-      <parent>teo_leftLeg::FrontalLeftKnee_link</parent>
-      <child>teo_leftLeg::FrontalLeftAnkle_link</child>
+      <parent>TEO_leftLeg::FrontalLeftKnee_link</parent>
+      <child>TEO_leftLeg::FrontalLeftAnkle_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -201,8 +201,8 @@
     </link>
 
     <joint name='SagittalLeftAnkle' type='revolute'>
-      <parent>teo_leftLeg::FrontalLeftAnkle_link</parent>
-      <child>teo_leftLeg::SagittalLeftAnkle_link</child>
+      <parent>TEO_leftLeg::FrontalLeftAnkle_link</parent>
+      <child>TEO_leftLeg::SagittalLeftAnkle_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -238,8 +238,8 @@
     </link>
 
     <joint name='LeftFoot' type='fixed'>
-      <parent>teo_leftLeg::SagittalLeftAnkle_link</parent>
-      <child>teo_leftLeg::LeftFoot_link</child>
+      <parent>TEO_leftLeg::SagittalLeftAnkle_link</parent>
+      <child>TEO_leftLeg::LeftFoot_link</child>
     </joint>
 
     <plugin name='controlboard_leftLeg' filename='libgazebo_yarp_controlboard.so'>

@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='teo_leftArm'>
+  <model name='TEO_leftArm'>
 
     <link name='FrontalLeftShoulder_link'>
       <pose>0 0 0 0 -0 0</pose>
@@ -26,8 +26,8 @@
     </link>
 
     <joint name='FrontalLeftShoulder' type='revolute'>
-      <parent>teo_trunk::FrontalWaist_link</parent>
-      <child>teo_leftArm::FrontalLeftShoulder_link</child>
+      <parent>TEO_trunk::FrontalWaist_link</parent>
+      <child>TEO_leftArm::FrontalLeftShoulder_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -61,8 +61,8 @@
     </link>
 
     <joint name='SagittalLeftShoulder' type='revolute'>
-      <parent>teo_leftArm::FrontalLeftShoulder_link</parent>
-      <child>teo_leftArm::SagittalLeftShoulder_link</child>
+      <parent>TEO_leftArm::FrontalLeftShoulder_link</parent>
+      <child>TEO_leftArm::SagittalLeftShoulder_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -96,8 +96,8 @@
     </link>
 
     <joint name='AxialLeftShoulder' type='revolute'>
-      <parent>teo_leftArm::SagittalLeftShoulder_link</parent>
-      <child>teo_leftArm::AxialLeftShoulder_link</child>
+      <parent>TEO_leftArm::SagittalLeftShoulder_link</parent>
+      <child>TEO_leftArm::AxialLeftShoulder_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -131,8 +131,8 @@
     </link>
 
     <joint name='FrontalLeftElbow' type='revolute'>
-      <parent>teo_leftArm::AxialLeftShoulder_link</parent>
-      <child>teo_leftArm::FrontalLeftElbow_link</child>
+      <parent>TEO_leftArm::AxialLeftShoulder_link</parent>
+      <child>TEO_leftArm::FrontalLeftElbow_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -166,8 +166,8 @@
     </link>
 
     <joint name='AxialLeftWrist' type='revolute'>
-      <parent>teo_leftArm::FrontalLeftElbow_link</parent>
-      <child>teo_leftArm::AxialLeftWrist_link</child>
+      <parent>TEO_leftArm::FrontalLeftElbow_link</parent>
+      <child>TEO_leftArm::AxialLeftWrist_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -201,8 +201,8 @@
     </link>
 
     <joint name='FrontalLeftWrist' type='revolute'>
-      <parent>teo_leftArm::AxialLeftWrist_link</parent>
-      <child>teo_leftArm::FrontalLeftWrist_link</child>
+      <parent>TEO_leftArm::AxialLeftWrist_link</parent>
+      <child>TEO_leftArm::FrontalLeftWrist_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
