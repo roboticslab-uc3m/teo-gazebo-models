@@ -34,6 +34,10 @@
           <lower>-1.69</lower>
           <upper>1.98</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -69,23 +73,27 @@
           <lower>-0.42</lower>
           <upper>1.34</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
     <link name='AxialLeftShoulder_link'>
       <pose>0 0.084 -0.329 0 -0 0</pose>
-      <!--<inertial>
+      <inertial>
         <pose>-0.000172 0.000249 0.100649 0 -0 0</pose>
         <mass>1</mass>
-        <inertia>
+        <!--<inertia>
           <ixx>0.006925108</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.006741634</iyy>
           <iyz>0.0000397</iyz>
           <izz>0.000611796</izz>
-        </inertia>
-      </inertial>-->
+        </inertia>-->
+      </inertial>
       <visual name='AxialLeftShoulder_visual'>
         <geometry>
           <mesh>
@@ -104,6 +112,10 @@
           <lower>-0.9</lower>
           <upper>1.47</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -139,6 +151,10 @@
           <lower>-1.76</lower>
           <upper>1.69</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -174,6 +190,10 @@
           <lower>-1.77</lower>
           <upper>1.33</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -209,6 +229,10 @@
           <lower>-1.98</lower>
           <upper>1.07</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 

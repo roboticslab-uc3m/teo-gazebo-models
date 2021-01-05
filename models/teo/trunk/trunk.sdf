@@ -34,6 +34,10 @@
           <lower>-1.03</lower>
           <upper>0.81</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -69,6 +73,10 @@
           <lower>-1.58</lower>
           <upper>0.18</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 

@@ -34,6 +34,10 @@
           <lower>-0.57</lower>
           <upper>0.49</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -69,6 +73,10 @@
           <lower>-0.25</lower>
           <upper>0.22</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -104,6 +112,10 @@
           <lower>-0.55</lower>
           <upper>0.74</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -139,6 +151,10 @@
           <lower>-1.07</lower>
           <upper>1.44</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -174,6 +190,10 @@
           <lower>-0.4</lower>
           <upper>0.44</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
@@ -209,6 +229,10 @@
           <lower>-0.35</lower>
           <upper>0.74</upper>
         </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
       </axis>
     </joint>
 
