@@ -22,6 +22,12 @@
             <uri>model://teo/meshes/visual/AxialWaist.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -61,6 +67,12 @@
             <uri>model://teo/meshes/visual/RootWaist.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.905882 0 0.172549 1</ambient>
+          <diffuse>0.905882 0 0.172549 1</diffuse>
+          <specular>0.452941 0 0.086275 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 

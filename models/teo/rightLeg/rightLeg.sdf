@@ -22,6 +22,12 @@
             <uri>model://teo/meshes/visual/AxialRightHip.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -61,6 +67,12 @@
             <uri>model://teo/meshes/visual/SagittalRightHip.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -100,6 +112,12 @@
             <uri>model://teo/meshes/visual/FrontalRightHip.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -139,6 +157,12 @@
             <uri>model://teo/meshes/visual/FrontalRightKnee.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -178,6 +202,12 @@
             <uri>model://teo/meshes/visual/FrontalRightAnkle.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -217,6 +247,12 @@
             <uri>model://teo/meshes/visual/SagittalRightAnkle.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 

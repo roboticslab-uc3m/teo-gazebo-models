@@ -22,6 +22,12 @@
             <uri>model://teo/meshes/visual/FrontalRightShoulder.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -61,6 +67,12 @@
             <uri>model://teo/meshes/visual/SagittalRightShoulder.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -100,6 +112,12 @@
             <uri>model://teo/meshes/visual/AxialRightShoulder.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -139,6 +157,12 @@
             <uri>model://teo/meshes/visual/FrontalRightElbow.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -178,6 +202,12 @@
             <uri>model://teo/meshes/visual/AxialRightWrist.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
@@ -217,6 +247,12 @@
             <uri>model://teo/meshes/visual/FrontalRightWrist.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
     </link>
 
