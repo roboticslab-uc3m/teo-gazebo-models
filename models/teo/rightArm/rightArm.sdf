@@ -29,6 +29,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalRightShoulder_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalRightShoulder.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalRightShoulder' type='revolute'>
@@ -74,6 +81,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='SagittalRightShoulder_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/SagittalRightShoulder.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='SagittalRightShoulder' type='revolute'>
@@ -119,6 +133,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='AxialRightShoulder_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/AxialRightShoulder.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='AxialRightShoulder' type='revolute'>
@@ -164,6 +185,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalRightElbow_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalRightElbow.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalRightElbow' type='revolute'>
@@ -209,6 +237,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='AxialRightWrist_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/AxialRightWrist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='AxialRightWrist' type='revolute'>
@@ -254,6 +289,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalRightWrist_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalRightWrist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalRightWrist' type='revolute'>

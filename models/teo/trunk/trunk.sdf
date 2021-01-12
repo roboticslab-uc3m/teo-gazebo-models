@@ -29,6 +29,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='AxialWaist_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/AxialWaist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='AxialWaist' type='revolute'>
@@ -74,6 +81,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalWaist_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/RootWaist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalWaist' type='revolute'>

@@ -29,6 +29,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='AxialLeftHip_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/AxialLeftHip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='AxialLeftHip' type='revolute'>
@@ -74,6 +81,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='SagittalLeftHip_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/SagittalLeftHip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='SagittalLeftHip' type='revolute'>
@@ -119,6 +133,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalLeftHip_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalLeftHip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalLeftHip' type='revolute'>
@@ -164,6 +185,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalLeftKnee_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalLeftKnee.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalLeftKnee' type='revolute'>
@@ -209,6 +237,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalLeftAnkle_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalLeftAnkle.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='FrontalLeftAnkle' type='revolute'>
@@ -254,6 +289,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='SagittalLeftAnkle_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/SagittalLeftAnkle.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='SagittalLeftAnkle' type='revolute'>

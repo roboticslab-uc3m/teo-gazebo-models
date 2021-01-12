@@ -29,6 +29,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='AxialNeck_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/AxialNeck.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <joint name='AxialNeck' type='revolute'>
@@ -74,6 +81,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='FrontalNeck_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/FrontalNeck.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
       <sensor name='xtion_rgbd' type='depth'>
         <pose>0 0 0 0 -0 0</pose>
         <camera>

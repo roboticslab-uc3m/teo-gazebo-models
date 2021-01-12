@@ -29,6 +29,13 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
+      <collision name='RootWaist_links_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/RootWaist_links.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
 
     <include>
