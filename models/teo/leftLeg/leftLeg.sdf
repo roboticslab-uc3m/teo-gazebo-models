@@ -295,33 +295,6 @@
             <uri>model://teo/meshes/collision/SagittalLeftAnkle.stl</uri>
           </mesh>
         </geometry>
-      </collision>
-    </link>
-
-    <joint name='SagittalLeftAnkle' type='revolute'>
-      <parent>TEO_leftLeg::FrontalLeftAnkle_link</parent>
-      <child>TEO_leftLeg::SagittalLeftAnkle_link</child>
-      <axis>
-        <xyz>1 0 0</xyz>
-        <limit>
-          <lower>-0.74</lower>
-          <upper>0.35</upper>
-        </limit>
-        <dynamics>
-          <damping>0.001</damping>
-          <friction>0.7</friction>
-        </dynamics>
-      </axis>
-    </joint>
-
-    <link name='LeftFoot_link'>
-      <pose>0.0525 -0.0175 -0.84 0 -0 0</pose>
-      <collision name='LeftFoot_collision'>
-        <geometry>
-          <box>
-            <size>0.245 0.14 0.01</size>
-          </box>
-        </geometry>
         <max_contacts>4</max_contacts>
         <surface>
           <contact>
@@ -339,9 +312,20 @@
       </collision>
     </link>
 
-    <joint name='LeftFoot' type='fixed'>
-      <parent>TEO_leftLeg::SagittalLeftAnkle_link</parent>
-      <child>TEO_leftLeg::LeftFoot_link</child>
+    <joint name='SagittalLeftAnkle' type='revolute'>
+      <parent>TEO_leftLeg::FrontalLeftAnkle_link</parent>
+      <child>TEO_leftLeg::SagittalLeftAnkle_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.74</lower>
+          <upper>0.35</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.7</friction>
+        </dynamics>
+      </axis>
     </joint>
 
     <plugin name='controlboard_leftLeg' filename='libgazebo_yarp_controlboard.so'>
