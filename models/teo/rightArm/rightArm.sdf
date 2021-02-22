@@ -108,18 +108,18 @@
 
     <link name='AxialRightShoulder_link'>
       <pose>0 -0.084 -0.329 0 -0 0</pose>
-      <!--<inertial>
+      <inertial>
         <pose>0.000347 0.000245 0.107382 0 -0 0</pose>
         <mass>1</mass>
-        <inertia>
+        <!--<inertia>
           <ixx>0.006925108</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.006741634</iyy>
           <iyz>-0.0000397</iyz>
           <izz>0.000611796</izz>
-        </inertia>
-      </inertial>-->
+        </inertia>-->
+      </inertial>
       <visual name='AxialRightShoulder_visual'>
         <geometry>
           <mesh>
@@ -212,18 +212,18 @@
 
     <link name='AxialRightWrist_link'>
       <pose>0 -0.084 -0.531 0 -0 0</pose>
-      <!--<inertial>
+      <inertial>
         <pose>-0.001151 0.000603 0.02464 0 -0 0</pose>
         <mass>0.63149</mass>
-        <inertia>
+        <!--<inertia>
           <ixx>0.000701463</ixx>
           <ixy>-0.0000105</ixy>
           <ixz>-0.0000109</ixz>
           <iyy>0.000612806</iyy>
           <iyz>0.0000115</iyz>
           <izz>0.000326949</izz>
-        </inertia>
-      </inertial>-->
+        </inertia>-->
+      </inertial>
       <visual name='AxialRightWrist_visual'>
         <geometry>
           <mesh>
