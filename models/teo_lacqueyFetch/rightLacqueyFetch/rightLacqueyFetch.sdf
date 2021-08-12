@@ -5,15 +5,15 @@
     <link name='FrontalRightWrist_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>-0.002314 0.00007 -0.108635 0 -0 0</pose>
+        <pose>-0.000050 -0.000055 -0.107329 0 -0 0</pose>
         <mass>1.078</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.0033558744</ixx>
+          <ixy>-0.000000324</ixy>
+          <ixz>0.0000088739</ixz>
+          <iyy>0.0031520281</iyy>
+          <iyz>0.0000036082</iyz>
+          <izz>0.0010088020</izz>
         </inertia>
       </inertial>
       <visual name='FrontalRightWrist_visual'>
@@ -44,15 +44,15 @@
 		<link name='RightThumbProximal_link'>
 	  	<pose>0.027472302 0 -0.164588951 0 -0 0</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.012547 0.000009 -0.020977 0 -0 0</pose>
         <mass>0.018092</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.0000042540336</ixx>
+          <ixy>-0.000000000003</ixy>
+          <ixz>0.0000016664918</ixz>
+          <iyy>0.0000051152263</iyy>
+          <iyz>-0.000000000012</iyz>
+          <izz>0.0000014691909</izz>
         </inertia>
       </inertial>
       <visual name='RightThumbProximalRight_visual'>
@@ -99,15 +99,15 @@
 		<link name='RightThumbDistal_link'>
 			<pose>0.054472302 0 -0.211588951 0 -0 0</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.006817 0 -0.017343 0 -0 0</pose>
         <mass>0.01234</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.000002852</ixx>
+          <ixy>0.000000000</ixy>
+          <ixz>0.000000239</ixz>
+          <iyy>0.000003003</iyy>
+          <iyz>0.00000000</iyz>
+          <izz>0.000000357</izz>
         </inertia>
       </inertial>
       <visual name='RightThumbDistal_visual'>
@@ -153,15 +153,15 @@
 		<link name='ExternalRightFingerProximal_link'>
 	  	<pose>-0.02852741 -0.02010339 -0.164409358 0 0 -3.14159265359</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.012547 0.000009 -0.020977 0 -0 0</pose>
         <mass>0.018092</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.0000042540336</ixx>
+          <ixy>-0.000000000003</ixy>
+          <ixz>0.0000016664918</ixz>
+          <iyy>0.0000051152263</iyy>
+          <iyz>-0.000000000012</iyz>
+          <izz>0.0000014691909</izz>
         </inertia>
       </inertial>
       <visual name='ExternalRightFingerProximal_visual'>
@@ -208,15 +208,15 @@
 		<link name='ExternalRightFingerDistal_link'>
 			<pose>-0.05552741 -0.02010339 -0.211409358 0 -0 -3.14159265359</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.006817 0 -0.017343 0 -0 0</pose>
         <mass>0.01234</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.000002852</ixx>
+          <ixy>0.000000000</ixy>
+          <ixz>0.000000239</ixz>
+          <iyy>0.000003003</iyy>
+          <iyz>0.00000000</iyz>
+          <izz>0.000000357</izz>
         </inertia>
       </inertial>
       <visual name='ExternalRightFingerDistal_visual'>
@@ -263,15 +263,15 @@
 		<link name='InternalRightFingerProximal_link'>
 	  	<pose>-0.02852741 0.02010339 -0.164409358 0 0 -3.14159265359</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.012547 0.000009 -0.020977 0 -0 0</pose>
         <mass>0.018092</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.0000042540336</ixx>
+          <ixy>-0.000000000003</ixy>
+          <ixz>0.0000016664918</ixz>
+          <iyy>0.0000051152263</iyy>
+          <iyz>-0.000000000012</iyz>
+          <izz>0.0000014691909</izz>
         </inertia>
       </inertial>
       <visual name='InternalRightFingerProximal_visual'>
@@ -318,15 +318,15 @@
 		<link name='InternalRightFingerDistal_link'>
 			<pose>-0.05552741 0.02010339 -0.211409358 0 -0 -3.14159265359</pose>
       <inertial>
-        <pose>0.0 0 -0.0 0 -0 0</pose>
+        <pose>0.006817 0 -0.017343 0 -0 0</pose>
         <mass>0.01234</mass>
         <inertia>
-          <ixx>0.005329957</ixx>
-          <ixy>0.000000102</ixy>
-          <ixz>0.000114751</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000883179</izz>
+          <ixx>0.000002852</ixx>
+          <ixy>0.000000000</ixy>
+          <ixz>0.000000239</ixz>
+          <iyy>0.000003003</iyy>
+          <iyz>0.00000000</iyz>
+          <izz>0.000000357</izz>
         </inertia>
       </inertial>
       <visual name='InternalRightFingerDistal_visual'>
