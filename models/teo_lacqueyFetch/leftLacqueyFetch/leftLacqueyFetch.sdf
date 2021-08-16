@@ -31,12 +31,32 @@
         </material>
       </visual>
       <collision name='FrontalLeftWrist_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 0.0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/FrontalWrist.dae</uri>
+            <uri>model://teo/meshes/collision/lacqueyFetch/FrontalWrist.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>10</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
 
@@ -70,12 +90,32 @@
         </material>
       </visual>
       <collision name='LeftThumbProximal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
 
@@ -125,12 +165,32 @@
         </material>
       </visual>
       <collision name='LeftThumbDistal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
     <joint name='LeftThumbDistal' type='revolute'>
@@ -179,12 +239,32 @@
         </material>
       </visual>
       <collision name='ExternalLeftFingerProximal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose> 
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
 
@@ -234,12 +314,32 @@
         </material>
       </visual>
       <collision name='ExternalLeftFingerDistal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
     <joint name='ExternalLeftFingerDistal' type='revolute'>
@@ -289,12 +389,32 @@
         </material>
       </visual>
       <collision name='InternalLeftFingerProximal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
 
@@ -344,12 +464,32 @@
         </material>
       </visual>
       <collision name='InternalLeftFingerDistal_collision'>
+				<pose>0.0 0.0 0.0 1.57079632679 0.0 -3.14159265359</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
+				<max_contacts>2</max_contacts>
+				<surface>
+					<contact>
+						<ode>
+							<kp>1000000</kp>
+							<kd>100</kd>
+							<max_vel>0.001</max_vel>
+							<min_depth>0.001</min_depth>
+						</ode>
+					</contact>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+				</surface>
       </collision>
     </link>
     <joint name='InternalLeftFingerDistal' type='revolute'>
