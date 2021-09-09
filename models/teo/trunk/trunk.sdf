@@ -96,8 +96,8 @@
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-1.58</lower>
-          <upper>0.18</upper>
+          <lower>-0.18</lower>
+          <upper>1.58</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
