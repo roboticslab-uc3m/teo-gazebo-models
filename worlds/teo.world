@@ -13,6 +13,6 @@
     <include>
       <uri>model://teo</uri>
     </include>
-   
+
   </world>
 </sdf>

@@ -316,7 +316,7 @@
         </dynamics>
       </axis>
     </joint>
-    
+
     <link name='RightStump_link'>
       <pose>0.0 -0.081 -0.621 -1.5708 0 0</pose>
       <inertial>
@@ -370,7 +370,6 @@
         </dynamics>
       </axis>
     </joint>
-
 
     <plugin name='controlboard_rightArm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightArm.ini</yarpConfigurationFile>

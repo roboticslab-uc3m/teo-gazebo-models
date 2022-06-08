@@ -291,7 +291,7 @@
         </material>
       </visual>
       <collision name='FrontalLeftWrist_collision'>
-      	<pose>0.0 0.0 0.0 3.1415 0.0 0.0</pose>
+        <pose>0.0 0.0 0.0 3.1415 0.0 0.0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -324,7 +324,7 @@
         </dynamics>
       </axis>
     </joint>
-    
+
      <link name='LeftStump_link'>
       <pose>-0.0 0.081 -0.621 -1.5708 0 0</pose>
       <inertial>
@@ -378,7 +378,6 @@
         </dynamics>
       </axis>
     </joint>
-    
 
     <plugin name='controlboard_leftArm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftArm.ini</yarpConfigurationFile>

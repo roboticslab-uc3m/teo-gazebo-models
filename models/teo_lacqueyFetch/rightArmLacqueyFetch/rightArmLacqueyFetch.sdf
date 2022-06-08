@@ -282,11 +282,10 @@
         </dynamics>
       </axis>
     </joint>
-	
+
     <plugin name='controlboard_rightArm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightArm.ini</yarpConfigurationFile>
     </plugin>
-
 
   </model>
 </sdf>

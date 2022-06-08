@@ -262,45 +262,10 @@
       </axis>
     </joint>
 
-    <!--link name='FrontalLeftWrist_link'>
-      <pose>0 0.084 -0.531 0 -0 0</pose>
-      <inertial>
-        <pose>-0.002314 0.00007 -0.108635 0 -0 0</pose>
-        <mass>1.17</mass>
-        <inertia>
-          <ixx>0.005330647</ixx>
-          <ixy>0.000000128</ixy>
-          <ixz>0.000100487</ixz>
-          <iyy>0.005345282</iyy>
-          <iyz>-0.00000807</iyz>
-          <izz>0.000882489</izz>
-        </inertia>
-      </inertial>
-      <visual name='FrontalLeftWrist_visual'>
-        <geometry>
-          <mesh>
-            <uri>model://teo/meshes/visual/FrontalLeftWrist.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.792157 0.819608 0.933333 1</ambient>
-          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
-          <specular>0.633726 0.655686 0.746667 1</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-      </visual>
-      <collision name='FrontalLeftWrist_collision'>
-        <geometry>
-          <mesh>
-            <uri>model://teo/meshes/collision/FrontalLeftWrist.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-    </link-->
-	<include>
-			<pose>0 0.084 -0.531 0 0 0</pose>
-			<uri>model://teo_lacqueyFetch/leftLacqueyFetch</uri>
-	</include>
+    <include>
+      <pose>0 0.084 -0.531 0 0 0</pose>
+      <uri>model://teo_lacqueyFetch/leftLacqueyFetch</uri>
+    </include>
 
     <joint name='FrontalLeftWrist' type='revolute'>
       <parent>TEO_leftArm::AxialLeftWrist_link</parent>
@@ -321,7 +286,6 @@
     <plugin name='controlboard_leftArm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftArm.ini</yarpConfigurationFile>
     </plugin>
-
 
   </model>
 </sdf>
