@@ -383,5 +383,9 @@
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftArm.ini</yarpConfigurationFile>
     </plugin>
 
+    <plugin name='robotinterface_leftArm' filename='libgazebo_yarp_robotinterface.so'>
+      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftArm_nws.xml</yarpRobotInterfaceConfigurationFile>
+    </plugin>
+
   </model>
 </sdf>
