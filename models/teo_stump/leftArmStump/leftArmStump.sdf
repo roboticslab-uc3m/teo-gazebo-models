@@ -280,7 +280,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/Stump/FrontalWrist.dae</uri>
+            <uri>model://teo/meshes/visual/stump/FrontalWrist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -295,7 +295,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/Stump/FrontalWrist.stl</uri>
+            <uri>model://teo/meshes/collision/stump/FrontalWrist.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -343,7 +343,7 @@
         <pose>-0.025 -0.0 -0.068 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://teo/meshes/visual/Stump/Stump.stl</uri>
+            <uri>model://teo/meshes/visual/stump/Stump.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -357,7 +357,7 @@
         <pose>-0.025 -0.0 -0.068 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://teo/meshes/collision/Stump/Stump.stl</uri>
+            <uri>model://teo/meshes/collision/stump/Stump.stl</uri>
           </mesh>
         </geometry>
       </collision>
