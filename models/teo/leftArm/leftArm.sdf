@@ -277,8 +277,10 @@
         </inertia>
       </inertial>
       <visual name='FrontalLeftWrist_visual'>
+        <pose>0 0 0 -1.5708 0 0</pose>
         <geometry>
           <mesh>
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/visual/FrontalLeftWrist.dae</uri>
           </mesh>
         </geometry>
@@ -290,8 +292,10 @@
         </material>
       </visual>
       <collision name='FrontalLeftWrist_collision'>
+        <pose>0 0 0 -1.5708 0 0</pose>
         <geometry>
           <mesh>
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/FrontalLeftWrist.stl</uri>
           </mesh>
         </geometry>

@@ -1,8 +1,8 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='TEO_leftLacqueyFetch'>
-    <!-- Base: FrontalWrist (muñeca + palma) -->
-    <link name='FrontalLeftWrist_link'>
+    <!-- Base: Wrist (muñeca + palma) -->
+    <link name='LeftWrist_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>-0.000050 -0.000055 -0.107329 0 -0 0</pose>
@@ -16,11 +16,11 @@
           <izz>0.0010088020</izz>
         </inertia>
       </inertial>
-      <visual name='FrontalLeftWrist_visual'>
+      <visual name='LeftWrist_visual'>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/FrontalWrist.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/Wrist.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -30,12 +30,12 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
-      <collision name='FrontalLeftWrist_collision'>
+      <collision name='LeftWrist_collision'>
         <pose>0.0 0.0 0.0 1.57079632679 0.0 0.0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/FrontalWrist.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/Wrist.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>
@@ -79,7 +79,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeProximal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeProximal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -94,7 +94,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -120,7 +120,7 @@
     </link>
 
     <joint name='LeftThumbProximal' type='revolute'>
-      <parent>TEO_leftLacqueyFetch::FrontalLeftWrist_link</parent>
+      <parent>TEO_leftLacqueyFetch::LeftWrist_link</parent>
       <child>TEO_leftLacqueyFetch::LeftThumbProximal_link</child>
       <axis>
         <xyz>0 -1 0</xyz>
@@ -154,7 +154,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeDistal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeDistal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -169,7 +169,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -228,7 +228,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeProximal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeProximal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -243,7 +243,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -269,7 +269,7 @@
     </link>
 
     <joint name='ExternalLeftFingerProximal' type='revolute'>
-      <parent>TEO_leftLacqueyFetch::FrontalLeftWrist_link</parent>
+      <parent>TEO_leftLacqueyFetch::LeftWrist_link</parent>
       <child>TEO_leftLacqueyFetch::ExternalLeftFingerProximal_link</child>
       <axis>
         <xyz>0 -1 0</xyz>
@@ -303,7 +303,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeDistal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeDistal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -318,7 +318,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -377,7 +377,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeProximal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeProximal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -392,7 +392,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeProximal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeProximal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -418,7 +418,7 @@
     </link>
 
     <joint name='InternalLeftFingerProximal' type='revolute'>
-      <parent>TEO_leftLacqueyFetch::FrontalLeftWrist_link</parent>
+      <parent>TEO_leftLacqueyFetch::LeftWrist_link</parent>
       <child>TEO_leftLacqueyFetch::InternalLeftFingerProximal_link</child>
       <axis>
         <xyz>0 -1 0</xyz>
@@ -452,7 +452,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/visual/lacqueyFetch/PhalangeDistal.dae</uri>
+            <uri>model://teo_lacqueyFetch/meshes/visual/PhalangeDistal.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -467,7 +467,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://teo/meshes/collision/lacqueyFetch/PhalangeDistal.stl</uri>
+            <uri>model://teo_lacqueyFetch/meshes/collision/PhalangeDistal.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>2</max_contacts>
@@ -508,27 +508,27 @@
     </joint>
 
     <plugin name='controlboard_leftLacqueyFetch_thumb' filename='libgazebo_yarp_controlboard.so'>
-      <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftLacqueyFetch_thumb.ini</yarpConfigurationFile>
+      <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_thumb.ini</yarpConfigurationFile>
     </plugin>
 
     <plugin name='robotinterface_leftLacqueyFetch_thumb' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftLacqueyFetch_thumb_nws.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_thumb_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
     <plugin name='controlboard_leftLacqueyFetch_externalFinger' filename='libgazebo_yarp_controlboard.so'>
-      <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftLacqueyFetch_externalFinger.ini</yarpConfigurationFile>
+      <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_externalFinger.ini</yarpConfigurationFile>
     </plugin>
 
     <plugin name='robotinterface_leftLacqueyFetch_externalFinger' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftLacqueyFetch_externalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_externalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
     <plugin name='controlboard_leftLacqueyFetch_internalFinger' filename='libgazebo_yarp_controlboard.so'>
-      <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftLacqueyFetch_internalFinger.ini</yarpConfigurationFile>
+      <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_internalFinger.ini</yarpConfigurationFile>
     </plugin>
 
     <plugin name='robotinterface_leftLacqueyFetch_internalFinger' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftLacqueyFetch_internalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_internalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
   </model>
