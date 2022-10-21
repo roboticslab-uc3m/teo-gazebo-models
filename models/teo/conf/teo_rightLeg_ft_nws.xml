@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="teo_rightLeg_ft" portprefix="/teoSim" build="0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <devices>
+        <device name="rightLeg_ft_nws_yarp" type="multipleanalogsensorsserver">
+            <param name="name">/teoSim/rightLeg/forceTorque</param>
+            <param name="period">10</param>
+            <action phase="startup" level="5" type="attach">
+                <param name="device">force_torque_rightLeg</param>
+            </action>
+            <action phase="shutdown" level="5" type="detach" />
+        </device>
+    </devices>
+</robot>

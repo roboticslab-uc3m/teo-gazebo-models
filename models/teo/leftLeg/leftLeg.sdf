@@ -295,20 +295,6 @@
             <uri>model://teo/meshes/collision/SagittalLeftAnkle.stl</uri>
           </mesh>
         </geometry>
-        <max_contacts>4</max_contacts>
-        <surface>
-          <contact>
-            <ode>
-              <kp>18000000</kp>
-              <kd>100</kd>
-              <max_vel>100</max_vel>
-              <min_depth>0.0001</min_depth>
-            </ode>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
     </link>
 
@@ -328,8 +314,79 @@
       </axis>
     </joint>
 
+    <link name='SagittalLeftFoot_link'>
+      <pose>0 -0.0175 -0.722 0 -0 0</pose>
+      <inertial>
+        <pose>0.010136 -0.000799 -0.0669 0 -0 0</pose>
+        <mass>3.1334</mass>
+        <inertia>
+          <ixx>0.007763728</ixx>
+          <ixy>-0.000524258</ixy>
+          <ixz>-0.001424772</ixz>
+          <iyy>0.014591641</iyy>
+          <iyz>0.000173925</iyz>
+          <izz>0.013164253</izz>
+        </inertia>
+      </inertial>
+      <visual name='SagittalLeftFoot_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/visual/SagittalLeftFoot.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name='SagittalLeftFoot_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/SagittalLeftFoot.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>4</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>18000000</kp>
+              <kd>100</kd>
+              <max_vel>100</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+
+    <joint name='SagittalLeftFoot' type='fixed'>
+      <parent>TEO_leftLeg::SagittalLeftAnkle_link</parent>
+      <child>TEO_leftLeg::SagittalLeftFoot_link</child>
+      <pose>0 0 -0.113 3.141593 0 0</pose>
+      <sensor name="leftLeg_ft_sensor" type="force_torque">
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+        <plugin name='leftLeg_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
+          <yarpConfigurationString>(yarpDeviceName force_torque_leftLeg) (disableImplicitNetworkWrapper)</yarpConfigurationString>
+        </plugin>
+      </sensor>
+    </joint>
+
     <plugin name='controlboard_leftLeg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftLeg.ini</yarpConfigurationFile>
+    </plugin>
+
+    <plugin name='robotinterface_leftLeg_ft' filename='libgazebo_yarp_robotinterface.so'>
+      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftLeg_ft_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
   </model>
