@@ -329,7 +329,7 @@
       <parent>TEO_leftArm::FrontalLeftWrist_link</parent>
       <child>TEO_leftArm::LeftSensorPlate_link</child>
       <pose>0 0 0 0 3.141593 0</pose>
-      <sensor name="leftArm_ft_sensor" type="force_torque">
+      <sensor name="leftArm_ft" type="force_torque">
         <always_on>true</always_on>
         <update_rate>200</update_rate>
         <visualize>true</visualize>
@@ -338,7 +338,7 @@
           <measure_direction>child_to_parent</measure_direction>
         </force_torque>
         <plugin name='leftArm_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-          <yarpConfigurationString>(yarpDeviceName force_torque_leftArm) (disableImplicitNetworkWrapper)</yarpConfigurationString>
+          <yarpConfigurationString>(yarpDeviceName forceTorque_leftArm) (disableImplicitNetworkWrapper)</yarpConfigurationString>
         </plugin>
       </sensor>
     </joint>

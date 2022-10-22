@@ -368,7 +368,7 @@
       <parent>TEO_leftLeg::SagittalLeftAnkle_link</parent>
       <child>TEO_leftLeg::SagittalLeftFoot_link</child>
       <pose>0 0 -0.113 3.141593 0 0</pose>
-      <sensor name="leftLeg_ft_sensor" type="force_torque">
+      <sensor name="leftLeg_ft" type="force_torque">
         <always_on>true</always_on>
         <update_rate>200</update_rate>
         <force_torque>
@@ -376,7 +376,7 @@
           <measure_direction>child_to_parent</measure_direction>
         </force_torque>
         <plugin name='leftLeg_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-          <yarpConfigurationString>(yarpDeviceName force_torque_leftLeg) (disableImplicitNetworkWrapper)</yarpConfigurationString>
+          <yarpConfigurationString>(yarpDeviceName forceTorque_leftLeg) (disableImplicitNetworkWrapper)</yarpConfigurationString>
         </plugin>
       </sensor>
     </joint>
