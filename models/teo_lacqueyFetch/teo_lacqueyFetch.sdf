@@ -26,5 +26,9 @@
       <child>TEO_leftLacqueyFetch::LeftWrist_link</child>
     </joint>
 
+    <plugin name='robotinterface_teo_lacqueyFetch' filename='libgazebo_yarp_robotinterface.so'>
+      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_lacqueyFetch_nws.xml</yarpRobotInterfaceConfigurationFile>
+    </plugin>
+
   </model>
 </sdf>

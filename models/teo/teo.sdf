@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='TEO'>
+  
+    <pose>0 0 0.845 0 -0 0</pose>
 
     <link name='RootWaist_links'>
       <pose>0 0 0 0 -0 0</pose>
@@ -68,7 +70,9 @@
       <uri>model://teo/leftLeg</uri>
     </include>
 
-    <pose>0 0 0.845 0 -0 0</pose>
+    <plugin name='robotinterface_teo' filename='libgazebo_yarp_robotinterface.so'>
+      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_nws.xml</yarpRobotInterfaceConfigurationFile>
+    </plugin>
 
   </model>
 </sdf>

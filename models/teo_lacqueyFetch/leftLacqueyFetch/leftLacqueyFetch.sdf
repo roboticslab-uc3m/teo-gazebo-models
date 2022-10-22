@@ -511,24 +511,12 @@
       <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_thumb.ini</yarpConfigurationFile>
     </plugin>
 
-    <plugin name='robotinterface_leftLacqueyFetch_thumb' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_thumb_nws.xml</yarpRobotInterfaceConfigurationFile>
-    </plugin>
-
     <plugin name='controlboard_leftLacqueyFetch_externalFinger' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_externalFinger.ini</yarpConfigurationFile>
     </plugin>
 
-    <plugin name='robotinterface_leftLacqueyFetch_externalFinger' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_externalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
-    </plugin>
-
     <plugin name='controlboard_leftLacqueyFetch_internalFinger' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo_lacqueyFetch/conf/gazebo_teo_leftLacqueyFetch_internalFinger.ini</yarpConfigurationFile>
-    </plugin>
-
-    <plugin name='robotinterface_leftLacqueyFetch_internalFinger' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo_lacqueyFetch/conf/teo_leftLacqueyFetch_internalFinger_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
   </model>

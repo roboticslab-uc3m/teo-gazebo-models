@@ -138,13 +138,5 @@
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_head.ini</yarpConfigurationFile>
     </plugin>
 
-    <plugin name='robotinterface_head' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_head_nws.xml</yarpRobotInterfaceConfigurationFile>
-    </plugin>
-
-    <plugin name='robotinterface_camera' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_depthcamera_nws.xml</yarpRobotInterfaceConfigurationFile>
-    </plugin>
-
   </model>
 </sdf>
