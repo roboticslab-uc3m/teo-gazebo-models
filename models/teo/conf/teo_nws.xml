@@ -59,5 +59,37 @@
             </action>
             <action phase="shutdown" level="5" type="detach" />
         </device>
+        <device name="leftArm_ft_nws_yarp" type="multipleanalogsensorsserver">
+            <param name="name">/teoSim/leftArm/forceTorque</param>
+            <param name="period">10</param>
+            <action phase="startup" level="5" type="attach">
+                <param name="device">force_torque_leftArm</param>
+            </action>
+            <action phase="shutdown" level="5" type="detach" />
+        </device>
+        <device name="rightArm_ft_nws_yarp" type="multipleanalogsensorsserver">
+            <param name="name">/teoSim/rightArm/forceTorque</param>
+            <param name="period">10</param>
+            <action phase="startup" level="5" type="attach">
+                <param name="device">force_torque_rightArm</param>
+            </action>
+            <action phase="shutdown" level="5" type="detach" />
+        </device>
+        <device name="leftLeg_ft_nws_yarp" type="multipleanalogsensorsserver">
+            <param name="name">/teoSim/leftLeg/forceTorque</param>
+            <param name="period">10</param>
+            <action phase="startup" level="5" type="attach">
+                <param name="device">force_torque_leftLeg</param>
+            </action>
+            <action phase="shutdown" level="5" type="detach" />
+        </device>
+        <device name="rightLeg_ft_nws_yarp" type="multipleanalogsensorsserver">
+            <param name="name">/teoSim/rightLeg/forceTorque</param>
+            <param name="period">10</param>
+            <action phase="startup" level="5" type="attach">
+                <param name="device">force_torque_rightLeg</param>
+            </action>
+            <action phase="shutdown" level="5" type="detach" />
+        </device>
     </devices>
 </robot>
