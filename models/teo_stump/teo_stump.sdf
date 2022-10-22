@@ -13,7 +13,7 @@
     </include>
 
     <joint name='RightStump' type='fixed'>
-      <parent>TEO::TEO_rightArm::FrontalRightWrist_link</parent>
+      <parent>TEO::TEO_rightArm::RightSensorPlate_link</parent>
       <child>TEO_rightStump::Stump_link</child>
     </joint>
 
@@ -24,7 +24,7 @@
     </include>
 
     <joint name='LeftStump' type='fixed'>
-      <parent>TEO::TEO_leftArm::FrontalLeftWrist_link</parent>
+      <parent>TEO::TEO_leftArm::LeftSensorPlate_link</parent>
       <child>TEO_leftStump::Stump_link</child>
     </joint>
 

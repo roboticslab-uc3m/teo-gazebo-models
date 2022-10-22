@@ -12,7 +12,7 @@
     </include>
 
     <joint name='RightWrist' type='fixed'>
-      <parent>TEO::TEO_rightArm::FrontalRightWrist_link</parent>
+      <parent>TEO::TEO_rightArm::RightSensorPlate_link</parent>
       <child>TEO_rightLacqueyFetch::RightWrist_link</child>
     </joint>
 
@@ -22,7 +22,7 @@
     </include>
 
     <joint name='LeftWrist' type='fixed'>
-      <parent>TEO::TEO_leftArm::FrontalLeftWrist_link</parent>
+      <parent>TEO::TEO_leftArm::LeftSensorPlate_link</parent>
       <child>TEO_leftLacqueyFetch::LeftWrist_link</child>
     </joint>
 
