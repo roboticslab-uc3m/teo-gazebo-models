@@ -61,7 +61,7 @@
         </device>
         <device name="imu_nws_yarp" type="multipleanalogsensorsserver">
             <param name="name">/teoSim/imu</param>
-            <param name="period">10</param>
+            <param name="period">5</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">imu</param>
             </action>
@@ -83,7 +83,7 @@
         </device>
         <device name="forceTorque_nws_yarp" type="multipleanalogsensorsserver">
             <param name="name">/teoSim/forceTorque</param>
-            <param name="period">10</param>
+            <param name="period">5</param>
             <action phase="startup" level="10" type="attach">
                 <param name="device">forceTorque_remapper</param>
             </action>
