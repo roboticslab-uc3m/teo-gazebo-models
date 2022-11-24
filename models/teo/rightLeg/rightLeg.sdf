@@ -266,7 +266,7 @@
       <pose>0 0.0175 -0.722 0 -0 0</pose>
       <inertial>
         <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
-        <mass>3.1334</mass>
+        <mass>2.1334</mass>
         <inertia>
           <ixx>0.00774203</ixx>
           <ixy>0.000455866</ixy>
@@ -318,7 +318,7 @@
       <pose>0 0.0175 -0.722 0 -0 0</pose>
       <inertial>
         <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
-        <mass>3.1334</mass>
+        <mass>1.0</mass>
         <inertia>
           <ixx>0.00774203</ixx>
           <ixy>0.000455866</ixy>
