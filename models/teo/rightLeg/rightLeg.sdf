@@ -266,7 +266,7 @@
       <pose>0 0.0175 -0.722 0 -0 0</pose>
       <inertial>
         <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
-        <mass>3.1334</mass>
+        <mass>2.1334</mass>
         <inertia>
           <ixx>0.00774203</ixx>
           <ixy>0.000455866</ixy>
@@ -295,20 +295,6 @@
             <uri>model://teo/meshes/collision/SagittalRightAnkle.stl</uri>
           </mesh>
         </geometry>
-        <max_contacts>4</max_contacts>
-        <surface>
-          <contact>
-            <ode>
-              <kp>18000000</kp>
-              <kd>100</kd>
-              <max_vel>100</max_vel>
-              <min_depth>0.0001</min_depth>
-            </ode>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
     </link>
 
@@ -328,12 +314,75 @@
       </axis>
     </joint>
 
+    <link name='SagittalRightFoot_link'>
+      <pose>0 0.0175 -0.722 0 -0 0</pose>
+      <inertial>
+        <pose>0.01003 0.000936 -0.0669 0 -0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.00774203</ixx>
+          <ixy>0.000455866</ixy>
+          <ixz>-0.001851657</ixz>
+          <iyy>0.014781323</iyy>
+          <iyz>-0.000147513</iyz>
+          <izz>0.013361748</izz>
+        </inertia>
+      </inertial>
+      <visual name='FrontalRightFoot_visual'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/visual/SagittalRightFoot.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.792157 0.819608 0.933333 1</ambient>
+          <diffuse>0.792157 0.819608 0.933333 1</diffuse>
+          <specular>0.633726 0.655686 0.746667 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name='SagittalRightFoot_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://teo/meshes/collision/SagittalRightFoot.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>4</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>18000000</kp>
+              <kd>100</kd>
+              <max_vel>100</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+
+    <joint name='SagittalRightFoot' type='fixed'>
+      <parent>TEO_rightLeg::SagittalRightAnkle_link</parent>
+      <child>TEO_rightLeg::SagittalRightFoot_link</child>
+      <pose>0 0 -0.113 3.141593 0 0</pose>
+      <sensor name="rightLeg_ft" type="force_torque">
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+        <plugin name='rightLeg_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
+          <yarpConfigurationString>(yarpDeviceName forceTorque_rightLeg) (disableImplicitNetworkWrapper)</yarpConfigurationString>
+        </plugin>
+      </sensor>
+    </joint>
+
     <plugin name='controlboard_rightLeg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_rightLeg.ini</yarpConfigurationFile>
-    </plugin>
-
-    <plugin name='robotinterface_rightLeg' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_rightLeg_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
   </model>

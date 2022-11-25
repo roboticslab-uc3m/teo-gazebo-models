@@ -8,7 +8,7 @@
 
     <joint name="fixed_to_ground" type="fixed">
       <parent>world</parent>
-      <child>TEO::RootWaist_links</child>
+      <child>TEO_lacqueyFetch::TEO::RootWaist_links</child>
     </joint>
 
   </model>

@@ -266,7 +266,7 @@
       <pose>0 0.084 -0.531 0 -0 0</pose>
       <inertial>
         <pose>-0.002314 0.00007 -0.108635 0 -0 0</pose>
-        <mass>1.17</mass>
+        <mass>0.72</mass>
         <inertia>
           <ixx>0.005330647</ixx>
           <ixy>0.000000128</ixy>
@@ -277,8 +277,10 @@
         </inertia>
       </inertial>
       <visual name='FrontalLeftWrist_visual'>
+        <pose>0 0 0 -1.5708 0 0</pose>
         <geometry>
           <mesh>
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/visual/FrontalLeftWrist.dae</uri>
           </mesh>
         </geometry>
@@ -290,8 +292,10 @@
         </material>
       </visual>
       <collision name='FrontalLeftWrist_collision'>
+        <pose>0 0 0 -1.5708 0 0</pose>
         <geometry>
           <mesh>
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://teo/meshes/collision/FrontalLeftWrist.stl</uri>
           </mesh>
         </geometry>
@@ -314,12 +318,32 @@
       </axis>
     </joint>
 
+    <link name='LeftSensorPlate_link'>
+      <pose>0 0.084 -0.63401 0 -0 0</pose>
+      <inertial>
+        <mass>0.001</mass> <!-- can't be zero! -->
+      </inertial>
+    </link>
+
+    <joint name='LeftSensorPlate' type='fixed'>
+      <parent>TEO_leftArm::FrontalLeftWrist_link</parent>
+      <child>TEO_leftArm::LeftSensorPlate_link</child>
+      <pose>0 0 0 0 3.141593 0</pose>
+      <sensor name="leftArm_ft" type="force_torque">
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+        <plugin name='leftArm_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
+          <yarpConfigurationString>(yarpDeviceName forceTorque_leftArm) (disableImplicitNetworkWrapper)</yarpConfigurationString>
+        </plugin>
+      </sensor>
+    </joint>
+
     <plugin name='controlboard_leftArm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://teo/conf/gazebo_teo_leftArm.ini</yarpConfigurationFile>
-    </plugin>
-
-    <plugin name='robotinterface_leftArm' filename='libgazebo_yarp_robotinterface.so'>
-      <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_leftArm_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
   </model>
