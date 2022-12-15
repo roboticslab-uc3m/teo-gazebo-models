@@ -74,5 +74,7 @@
       <yarpRobotInterfaceConfigurationFile>model://teo/conf/teo_nws.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
 
+    <plugin name='externalwrench' filename='libgazebo_yarp_externalwrench.so' />
+
   </model>
 </sdf>
