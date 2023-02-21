@@ -14,5 +14,11 @@
       <uri>model://teo</uri>
     </include>
 
+    <!--<physics type="ode">
+      <solver>
+        <type>world</type>
+      </solver>
+    </physics>-->
+
   </world>
 </sdf>
