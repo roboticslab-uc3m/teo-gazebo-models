@@ -4,7 +4,7 @@
 <robot name="teo_nws" portprefix="/teoSim" build="0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <devices>
         <device name="head_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/head</param>
+            <param name="name">${portprefix}/head</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_head</param>
@@ -12,7 +12,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="leftArm_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/leftArm</param>
+            <param name="name">${portprefix}/leftArm</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_leftArm</param>
@@ -20,7 +20,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="rightArm_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/rightArm</param>
+            <param name="name">${portprefix}/rightArm</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_rightArm</param>
@@ -28,7 +28,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="trunk_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/trunk</param>
+            <param name="name">${portprefix}/trunk</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_trunk</param>
@@ -36,7 +36,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="leftLeg_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/leftLeg</param>
+            <param name="name">${portprefix}/leftLeg</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_leftLeg</param>
@@ -44,7 +44,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="rightLeg_nws_yarp" type="controlBoard_nws_yarp">
-            <param name="name">/teoSim/rightLeg</param>
+            <param name="name">${portprefix}/rightLeg</param>
             <param name="period">0.01</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">controlboard_rightLeg</param>
@@ -52,7 +52,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="depthcamera_nws_yarp" type="rgbdSensor_nws_yarp">
-            <param name="name">/teoSim/camera</param>
+            <param name="name">${portprefix}/camera</param>
             <param name="period">0.02</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">depthcamera</param>
@@ -60,7 +60,7 @@
             <action phase="shutdown" level="5" type="detach" />
         </device>
         <device name="imu_nws_yarp" type="multipleanalogsensorsserver">
-            <param name="name">/teoSim/imu</param>
+            <param name="name">${portprefix}/imu</param>
             <param name="period">5</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">imu</param>
@@ -82,7 +82,7 @@
             <action phase="shutdown" level="20" type="detach" />
         </device>
         <device name="forceTorque_nws_yarp" type="multipleanalogsensorsserver">
-            <param name="name">/teoSim/forceTorque</param>
+            <param name="name">${portprefix}/forceTorque</param>
             <param name="period">5</param>
             <action phase="startup" level="10" type="attach">
                 <param name="device">forceTorque_remapper</param>
