@@ -39,7 +39,7 @@
     </link>
 
     <joint name='FrontalRightShoulder' type='revolute'>
-      <parent>TEO_trunk::FrontalWaist_link</parent>
+      <parent>TEO_trunk::FrontalTrunk_link</parent>
       <child>TEO_rightArm::FrontalRightShoulder_link</child>
       <axis>
         <xyz>0 1 0</xyz>

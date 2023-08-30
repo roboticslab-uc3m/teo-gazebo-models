@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='TEO_trunk'>
 
-    <link name='AxialWaist_link'>
+    <link name='AxialTrunk_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>-0.002235 -0.000979 -0.018814 0 -0 0</pose>
@@ -16,7 +16,7 @@
           <izz>0.001471749</izz>
         </inertia>
       </inertial>
-      <visual name='AxialWaist_visual'>
+      <visual name='AxialTrunk_visual'>
         <geometry>
           <mesh>
             <uri>model://teo/meshes/visual/AxialWaist.dae</uri>
@@ -29,7 +29,7 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
-      <collision name='AxialWaist_collision'>
+      <collision name='AxialTrunk_collision'>
         <geometry>
           <mesh>
             <uri>model://teo/meshes/collision/AxialWaist.stl</uri>
@@ -38,9 +38,9 @@
       </collision>
     </link>
 
-    <joint name='AxialWaist' type='revolute'>
+    <joint name='AxialTrunk' type='revolute'>
       <parent>TEO::RootWaist_links</parent>
-      <child>TEO_trunk::AxialWaist_link</child>
+      <child>TEO_trunk::AxialTrunk_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -54,7 +54,7 @@
       </axis>
     </joint>
 
-    <link name='FrontalWaist_link'>
+    <link name='FrontalTrunk_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0.032985 -0.007876 0.220667 0 -0 0</pose>
@@ -68,7 +68,7 @@
           <izz>0.263359225</izz>
         </inertia>
       </inertial>
-      <visual name='FrontalWaist_visual'>
+      <visual name='FrontalTrunk_visual'>
         <geometry>
           <mesh>
             <uri>model://teo/meshes/visual/RootWaist.dae</uri>
@@ -81,7 +81,7 @@
           <emissive>0 0 0 1</emissive>
         </material>
       </visual>
-      <collision name='FrontalWaist_collision'>
+      <collision name='FrontalTrunk_collision'>
         <geometry>
           <mesh>
             <uri>model://teo/meshes/collision/RootWaist.stl</uri>
@@ -98,9 +98,9 @@
       </sensor>
     </link>
 
-    <joint name='FrontalWaist' type='revolute'>
-      <parent>TEO_trunk::AxialWaist_link</parent>
-      <child>TEO_trunk::FrontalWaist_link</child>
+    <joint name='FrontalTrunk' type='revolute'>
+      <parent>TEO_trunk::AxialTrunk_link</parent>
+      <child>TEO_trunk::FrontalTrunk_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>

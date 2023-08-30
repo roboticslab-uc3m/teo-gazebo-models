@@ -39,7 +39,7 @@
     </link>
 
     <joint name='AxialNeck' type='revolute'>
-      <parent>TEO_trunk::FrontalWaist_link</parent>
+      <parent>TEO_trunk::FrontalTrunk_link</parent>
       <child>TEO_head::AxialNeck_link</child>
       <axis>
         <xyz>0 0 1</xyz>
