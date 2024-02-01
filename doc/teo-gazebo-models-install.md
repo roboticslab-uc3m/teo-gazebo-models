@@ -2,8 +2,8 @@
 
 First install the dependencies:
 
-- [Install CMake 3.12+](https://github.com/roboticslab-uc3m/installation-guides/blob/master/docs/install-cmake.md)
-- [Install YCM 0.11+](https://github.com/roboticslab-uc3m/installation-guides/blob/master/docs/install-ycm.md)
+- [Install CMake 3.12+](https://github.com/roboticslab-uc3m/installation-guides/blob/master/docs/docs/install-cmake.md)
+- [Install YCM 0.11+](https://github.com/roboticslab-uc3m/installation-guides/blob/master/docs/docs/install-ycm.md)
 
 ### Install the Models
 
