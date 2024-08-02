@@ -36,7 +36,11 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get autopurge -y && \
     apt-get clean
 
+VOLUME ["/root/.gazebo/models"]
+VOLUME ["/root/.config/yarp/"]
+
 ENV GAZEBO_MODEL_PATH=/usr/local/share/gazebo/models
 ENV YARP_COLORED_OUTPUT=1
+
 ENTRYPOINT ["/usr/bin/gazebo"]
 WORKDIR /usr/local/share/gazebo/worlds
