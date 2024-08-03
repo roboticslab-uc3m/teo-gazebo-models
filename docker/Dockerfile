@@ -1,13 +1,19 @@
-FROM ubuntu:jammy
+FROM ubuntu:jammy AS build
 
 ARG YARP_TAG=master
 ARG CORES=1
-
 ARG DEBIAN_FRONTEND=noninteractive
-ARG DEV_PACKAGES="unzip ca-certificates build-essential cmake libtinyxml-dev libeigen3-dev libgazebo-dev"
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget libtinyxml2.6.2v5 gazebo $DEV_PACKAGES && \
+    apt-get install -y \
+        wget \
+        unzip \
+        ca-certificates \
+        build-essential \
+        cmake \
+        libtinyxml-dev \
+        libeigen3-dev \
+        libgazebo-dev && \
     wget -O ycm-cmake-modules.zip https://github.com/robotology/ycm-cmake-modules/archive/master.zip && \
     wget -O yarp.zip https://github.com/robotology/yarp/archive/$YARP_TAG.zip && \
     wget -O gazebo-yarp-plugins.zip https://github.com/robotology/gazebo-yarp-plugins/archive/master.zip && \
@@ -16,19 +22,30 @@ RUN apt-get update && \
     unzip yarp.zip && \
     unzip gazebo-yarp-plugins.zip && \
     unzip teo-gazebo-models.zip && \
-    cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build && \
+    cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build \
+        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
     cmake --build ycm-cmake-modules-master/build --target install && \
-    cmake -S yarp-$YARP_TAG -B yarp-$YARP_TAG/build -DSKIP_ACE=ON && \
+    cmake -S yarp-$YARP_TAG -B yarp-$YARP_TAG/build \
+        -DCMAKE_INSTALL_PREFIX:PATH=/install \
+        -DSKIP_ACE:BOOL=ON && \
     cmake --build yarp-$YARP_TAG/build --target install -- -j$CORES && \
-    cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build && \
+    cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build \
+        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
     cmake --build gazebo-yarp-plugins-master/build --target install -- -j$CORES && \
-    cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build && \
-    cmake --build teo-gazebo-models-master/build --target install && \
-    rm ycm-cmake-modules.zip yarp.zip gazebo-yarp-plugins.zip teo-gazebo-models.zip && \
-    rm -rf ycm-cmake-modules-master yarp-$YARP_TAG gazebo-yarp-plugins-master teo-gazebo-models-master && \
+    cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build \
+        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+    cmake --build teo-gazebo-models-master/build --target install
+
+FROM ubuntu:jammy
+COPY --from=build /install /usr/local
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        wget \
+        libtinyxml2.6.2v5 \
+        gazebo \
+        gazebo-plugin-base && \
     rm -rf /var/lib/apt/lists/* && \
-    apt-get purge -y $DEV_PACKAGES && \
-    apt-get autopurge -y && \
     apt-get clean
 
 COPY gazebo_models.txt /
@@ -37,8 +54,7 @@ COPY gui.ini /root/.gazebo/
 RUN mkdir -p ~/.gazebo/models && \
     wget -i gazebo_models.txt && \
     ls model.tar.gz* | xargs -n 1 sh -c 'tar xzvf "$@" -C ~/.gazebo/models/' dummy && \
-    rm model.tar.gz* && \
-    rm gazebo_models.txt
+    rm model.tar.gz*
 
 RUN ldconfig && \
     ln -s /usr/local/share/gazebo /gazebo
