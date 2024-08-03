@@ -1,15 +1,13 @@
-FROM ubuntu:22.04
+FROM ubuntu:jammy
 
 ARG YARP_TAG=master
 ARG CORES=1
 
-COPY gazebo_models.txt /
-COPY gui.ini /root/.gazebo/
+ARG DEBIAN_FRONTEND=noninteractive
+ARG DEV_PACKAGES="unzip ca-certificates build-essential cmake libtinyxml-dev libeigen3-dev libgazebo-dev"
 
-RUN DEBIAN_FRONTEND=noninteractive \
-    DEV_PACKAGES="wget unzip build-essential cmake libtinyxml-dev libeigen3-dev libgazebo-dev" && \
-    apt-get update && \
-    apt-get install -y libtinyxml2.6.2v5 gazebo $DEV_PACKAGES && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends wget libtinyxml2.6.2v5 gazebo $DEV_PACKAGES && \
     wget -O ycm-cmake-modules.zip https://github.com/robotology/ycm-cmake-modules/archive/master.zip && \
     wget -O yarp.zip https://github.com/robotology/yarp/archive/$YARP_TAG.zip && \
     wget -O gazebo-yarp-plugins.zip https://github.com/robotology/gazebo-yarp-plugins/archive/master.zip && \
@@ -28,14 +26,21 @@ RUN DEBIAN_FRONTEND=noninteractive \
     cmake --build teo-gazebo-models-master/build --target install && \
     rm ycm-cmake-modules.zip yarp.zip gazebo-yarp-plugins.zip teo-gazebo-models.zip && \
     rm -rf ycm-cmake-modules-master yarp-$YARP_TAG gazebo-yarp-plugins-master teo-gazebo-models-master && \
-    mkdir -p ~/.gazebo/models && \
-    wget -i gazebo_models.txt && \
-    ls model.tar.gz* | xargs -n 1 sh -c 'tar xzvf "$@" -C ~/.gazebo/models/' dummy && \
-    rm model.tar.gz* && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get purge -y $DEV_PACKAGES && \
     apt-get autopurge -y && \
-    apt-get clean && \
+    apt-get clean
+
+COPY gazebo_models.txt /
+COPY gui.ini /root/.gazebo/
+
+RUN mkdir -p ~/.gazebo/models && \
+    wget -i gazebo_models.txt && \
+    ls model.tar.gz* | xargs -n 1 sh -c 'tar xzvf "$@" -C ~/.gazebo/models/' dummy && \
+    rm model.tar.gz* && \
+    rm gazebo_models.txt
+
+RUN ldconfig && \
     ln -s /usr/local/share/gazebo /gazebo
 
 VOLUME ["/root/.gazebo/models"]
