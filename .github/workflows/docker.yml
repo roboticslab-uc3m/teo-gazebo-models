@@ -1,0 +1,62 @@
+name: Docker
+
+on:
+  workflow_dispatch:
+    inputs:
+      yarp_tag:
+        description: YARP tag
+        required: true
+        default: master
+        type: string
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{github.repository}}
+
+jobs:
+  docker:
+    name: 'build (YARP: ${{inputs.yarp_tag}}, ROS2: ${{matrix.ros2_status}})'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    strategy:
+      matrix:
+        include:
+        - tag: latest
+          ros2_status: disabled
+          file: Dockerfile
+        - tag: ros2
+          ros2_status: enabled
+          file: Dockerfile.ros2
+
+    steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Log in to the Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ${{env.REGISTRY}}
+        username: ${{github.actor}}
+        password: ${{secrets.GITHUB_TOKEN}}
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+        push: true
+        context: docker
+        file: docker/${{matrix.file}}
+        tags: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}:${{matrix.tag}}
+        labels: ${{steps.meta.outputs.labels}}
+        build-args: |
+          YARP_TAG=${{inputs.yarp_tag}}
