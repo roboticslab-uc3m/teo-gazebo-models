@@ -1,0 +1,2 @@
+http://models.gazebosim.org/ground_plane/model.tar.gz
+http://models.gazebosim.org/sun/model.tar.gz
