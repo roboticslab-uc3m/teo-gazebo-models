@@ -4,6 +4,7 @@ ARG YARP_TAG=master
 ARG CORES=1
 
 COPY gazebo_models.txt /
+COPY gui.ini /root/.gazebo/
 
 RUN DEBIAN_FRONTEND=noninteractive \
     DEV_PACKAGES="wget unzip build-essential cmake libtinyxml-dev libeigen3-dev libgazebo-dev" && \
