@@ -1,7 +1,5 @@
 FROM ubuntu:jammy AS build
 
-ARG YARP_TAG=master
-ARG CORES=1
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
@@ -15,6 +13,8 @@ RUN apt-get update && \
         libeigen3-dev \
         libgazebo-dev
 
+ARG YARP_TAG=master
+
 RUN wget -O ycm-cmake-modules.zip https://github.com/robotology/ycm-cmake-modules/archive/master.zip && \
     wget -O yarp.zip https://github.com/robotology/yarp/archive/$YARP_TAG.zip && \
     wget -O gazebo-yarp-plugins.zip https://github.com/robotology/gazebo-yarp-plugins/archive/master.zip && \
@@ -24,6 +24,8 @@ RUN unzip ycm-cmake-modules.zip && \
     unzip yarp.zip && \
     unzip gazebo-yarp-plugins.zip && \
     unzip teo-gazebo-models.zip
+
+ARG CORES=1
 
 RUN cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build \
         -DCMAKE_INSTALL_PREFIX:PATH=/install && \
