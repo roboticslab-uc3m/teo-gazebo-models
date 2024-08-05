@@ -30,33 +30,29 @@ RUN unzip ycm-cmake-modules.zip && \
 
 ARG CORES=1
 
-RUN cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build && \
     cmake --build ycm-cmake-modules-master/build --target install
 
 RUN cmake -S yarp-$YARP_TAG -B yarp-$YARP_TAG/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install -DSKIP_ACE:BOOL=ON && \
+        -DSKIP_ACE:BOOL=ON && \
     cmake --build yarp-$YARP_TAG/build --target install -- -j$CORES
 
-RUN cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build && \
     cmake --build gazebo-yarp-plugins-master/build --target install -- -j$CORES
 
-RUN cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build && \
     cmake --build teo-gazebo-models-master/build --target install
 
 RUN . /opt/ros/humble/setup.sh && \
     (cd yarp-devices-ros2-master/ros2_interfaces_ws && colcon build) && \
     . yarp-devices-ros2-master/ros2_interfaces_ws/install/setup.sh && \
     cmake -S yarp-devices-ros2-master -B yarp-devices-ros2-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install \
         -DYARP_ROS2_USE_SYSTEM_map2d_nws_ros2_msgs:BOOL=ON \
         -DYARP_ROS2_USE_SYSTEM_yarp_control_msgs:BOOL=ON && \
     cmake --build yarp-devices-ros2-master/build --target install -- -j$CORES
 
 FROM ros:humble-ros-core-jammy
-COPY --from=build /install /usr/local
+COPY --from=build /usr/local /usr/local
 COPY --from=build /yarp-devices-ros2-master/ros2_interfaces_ws /ros2_interfaces_ws
 
 RUN apt-get update && \

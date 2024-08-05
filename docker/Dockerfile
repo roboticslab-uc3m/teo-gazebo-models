@@ -27,25 +27,21 @@ RUN unzip ycm-cmake-modules.zip && \
 
 ARG CORES=1
 
-RUN cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S ycm-cmake-modules-master -B ycm-cmake-modules-master/build && \
     cmake --build ycm-cmake-modules-master/build --target install
 
 RUN cmake -S yarp-$YARP_TAG -B yarp-$YARP_TAG/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install \
         -DSKIP_ACE:BOOL=ON && \
     cmake --build yarp-$YARP_TAG/build --target install -- -j$CORES
 
-RUN cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S gazebo-yarp-plugins-master -B gazebo-yarp-plugins-master/build && \
     cmake --build gazebo-yarp-plugins-master/build --target install -- -j$CORES
 
-RUN cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build \
-        -DCMAKE_INSTALL_PREFIX:PATH=/install && \
+RUN cmake -S teo-gazebo-models-master -B teo-gazebo-models-master/build && \
     cmake --build teo-gazebo-models-master/build --target install
 
 FROM ubuntu:jammy
-COPY --from=build /install /usr/local
+COPY --from=build /usr/local /usr/local
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
