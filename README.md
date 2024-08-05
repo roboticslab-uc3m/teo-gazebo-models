@@ -24,6 +24,76 @@ Launch the robot floating slightly above ground with fixed root links:
 gazebo path/to/worlds/teo_fixed.world
 ```
 
+## Docker
+
+The following Docker images are available in the [ghcr.io container registry](https://github.com/roboticslab-uc3m/teo-gazebo-models/pkgs/container/teo-gazebo-models):
+
+- `docker pull ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest`: Gazebo 11 + YARP + plugins
+- `docker pull ghcr.io/roboticslab-uc3m/teo-gazebo-models:ros2`: Gazebo 11 + YARP + ROS Humble + plugins
+
+TEO Gazebo models are already preinstalled.
+
+### Usage
+
+The image is configured to use the `gazebo` executable as entry point and use the `/usr/local/share/gazebo/worlds` path as the working directory.
+
+First, make sure you launched the YARP server (`yarp server --write`) and gave access to the X server (`sudo xhost +`). Then, issue the following command anywhere on the preinstalled model you wish to use, e.g. `teo_fixed.world`:
+
+```bash
+docker run --rm --privileged \
+           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+           -v $HOME/.config/yarp:/root/.config/yarp:ro \
+           -e DISPLAY \
+           ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest teo_fixed.world
+```
+
+Alternatively, appending `-v $XAUTHORITY:/root/.Xauthority:ro` to the list of options would avoid the need of `sudo xhost +`. In .bashrc, add the following line:
+
+`export XAUTHORITY=$(xauth info | grep "Authority file" | awk '{ print $3 }')`
+
+#### Developing
+
+You might want to clone this repo and load the models you are currently working on instead of the preinstalled ones. A volume mounting point can be added on the current working directory (make sure it is the root directory of this repo, not `models/` nor `worlds/`):
+
+```bash
+docker run --rm --privileged \
+           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+           -v $HOME/.config/yarp:/root/.config/yarp:ro \
+           -v $PWD:/gazebo:ro \
+           -e DISPLAY \
+           ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest teo_fixed.world
+```
+
+#### .bashrc
+
+For ease of use, the following Bash aliases can be added to .bashrc:
+
+```bash
+XAUTHORITY=$(xauth info | grep "Authority file" | awk '{ print $3 }')
+alias gazebo='docker run --rm --privileged -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority:ro -v $HOME/.config/yarp:/root/.config/yarp:ro -e DISPLAY ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest'
+alias gazebo-ros='docker run --rm --privileged -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority:ro -v $HOME/.config/yarp:/root/.config/yarp:ro -e DISPLAY ghcr.io/roboticslab-uc3m/teo-gazebo-models:ros2'
+alias gazebo-dev='docker run --rm --privileged -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority:ro -v $HOME/.config/yarp:/root/.config/yarp:ro -v $PWD:/gazebo:ro -e DISPLAY ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest'
+alias gazebo-ros-dev='docker run --rm --privileged -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $XAUTHORITY:/root/.Xauthority:ro -v $HOME/.config/yarp:/root/.config/yarp:ro -v $PWD:/gazebo:ro -e DISPLAY ghcr.io/roboticslab-uc3m/teo-gazebo-models:ros2'
+```
+
+### Building
+
+The following build args are available:
+
+- `YARP_TAG`: YARP tag/branch/commit to compile against (default: `master`)
+- `CORES`: number of cores passed to the compiler (default: `1`)
+
+Note that `YARP_TAG=yarp-3.9` was reported to cause issues ([#10](https://github.com/roboticslab-uc3m/teo-gazebo-models/issues/10#issuecomment-2267623679)).
+
+Example:
+
+```bash
+cd /path/to/teo-gazebo-models/docker
+docker build -t ghcr.io/roboticslab-uc3m/teo-gazebo-models:latest --build-arg CORES=18 --build-arg YARP_TAG=master --file Dockerfile .
+```
+
+It is advised to use the GitHub Action `docker.yml` via manual dispatch (click on ["Run workflow"](https://github.com/roboticslab-uc3m/teo-gazebo-models/actions/workflows/docker.yml)).
+
 ## Contributing
 
 #### Posting Issues
