@@ -112,3 +112,7 @@ It is advised to use the GitHub Action `docker.yml` via manual dispatch (click o
 ## Status
 
 [![Issues](https://img.shields.io/github/issues/roboticslab-uc3m/teo-gazebo-models.svg?label=Issues)](https://github.com/roboticslab-uc3m/teo-gazebo-models/issues)
+
+## Similar and Related Projects
+
+- [roboticslab-uc3m/teo-openrave-models](https://github.com/roboticslab-uc3m/teo-openrave-models)
