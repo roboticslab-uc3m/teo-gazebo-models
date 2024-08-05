@@ -55,7 +55,7 @@ RUN . /opt/ros/humble/setup.sh && \
         -DYARP_ROS2_USE_SYSTEM_yarp_control_msgs:BOOL=ON && \
     cmake --build yarp-devices-ros2-master/build --target install -- -j$CORES
 
-FROM ros:humble-ros-base-jammy
+FROM ros:humble-ros-core-jammy
 COPY --from=build /install /usr/local
 COPY --from=build /yarp-devices-ros2-master/ros2_interfaces_ws /ros2_interfaces_ws
 
