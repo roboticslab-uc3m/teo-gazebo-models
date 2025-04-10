@@ -75,15 +75,16 @@
             </action>
             <action phase="shutdown" level="5" type="detach" />
         </device>
-        <!-- <device name="imu_nws_ros2" type="multipleanalogsensorsserver">
-            <param name="name">${portprefix}/imu</param>
-            <param name="period">5</param>
+        <device name="imu_nws_ros2" type="imu_nws_ros2">
+            <param name="node_name">${portprefix}_imu</param>
+            <param name="topic_name">/${portprefix}/imu</param>
+            <param name="period">0.005</param>
             <action phase="startup" level="5" type="attach">
                 <param name="device">imu</param>
             </action>
             <action phase="shutdown" level="5" type="detach" />
         </device>
-        <device name="forceTorque_remapper" type="multipleanalogsensorsremapper">
+        <!-- <device name="forceTorque_remapper" type="multipleanalogsensorsremapper">
             <param name="SixAxisForceTorqueSensorsNames">
                 (rightLeg_ft leftLeg_ft rightArm_ft leftArm_ft)
             </param>
