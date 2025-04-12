@@ -84,30 +84,6 @@
             </action>
             <action phase="shutdown" level="5" type="detach" />
         </device>
-        <!-- TODO: implement sensor index handling in wrenchStamped_nws_ros2 -->
-        <!-- <device name="forceTorque_remapper" type="multipleanalogsensorsremapper">
-            <param name="SixAxisForceTorqueSensorsNames">
-                (rightLeg_ft leftLeg_ft rightArm_ft leftArm_ft)
-            </param>
-            <action phase="startup" level="5" type="attach">
-                <paramlist name="networks">
-                    <elem name="rightLeg_ft">forceTorque_rightLeg</elem>
-                    <elem name="leftLeg_ft">forceTorque_leftLeg</elem>
-                    <elem name="rightArm_ft">forceTorque_rightArm</elem>
-                    <elem name="leftArm_ft">forceTorque_leftArm</elem>
-                </paramlist>
-            </action>
-            <action phase="shutdown" level="20" type="detach" />
-        </device>
-        <device name="forceTorque_nws_ros2" type="wrenchStamped_nws_ros2">
-            <param name="node_name">${portprefix}_forceTorque</param>
-            <param name="topic_name">/${portprefix}/forceTorque</param>
-            <param name="period">0.005</param>
-            <action phase="startup" level="10" type="attach">
-                <param name="device">forceTorque_remapper</param>
-            </action>
-            <action phase="shutdown" level="15" type="detach" />
-        </device> -->
         <device name="rightLeg_ft_nws_ros2" type="wrenchStamped_nws_ros2">
             <param name="node_name">${portprefix}_rightLeg_ft</param>
             <param name="topic_name">/${portprefix}/rightLeg_ft</param>
