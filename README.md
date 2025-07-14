@@ -1,4 +1,6 @@
-3D Gazebo models for TEO robot. If you are looking for the source code of the robot itself, visit the [teo-main](https://github.com/roboticslab-uc3m/teo-main) repository.
+# teo-gazebo-models
+
+3D Gazebo models for TEO robot. If you are looking for the source code of the robot itself, visit the [teo-main](https://github.com/roboticslab-uc3m/teo-main) repository. If you are looking for the models for the modern Gazebo simulator, visit the [roboticslab-uc3m/teo-gz-sim-models](https://github.com/roboticslab-uc3m/teo-gz-sim-models).
 
 ## Installation
 
@@ -96,12 +98,12 @@ It is advised to use the GitHub Action `docker.yml` via manual dispatch (click o
 
 ## Contributing
 
-#### Posting Issues
+### Posting Issues
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
 2. [Post an issue / Feature request / Specific documentation request](https://github.com/roboticslab-uc3m/teo-gazebo-models/issues)
 
-#### Fork & Pull Request
+### Fork & Pull Request
 
 1. [Fork the repository](https://github.com/roboticslab-uc3m/teo-gazebo-models/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`) off the `master` branch, following the [Forking Git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)
@@ -115,4 +117,5 @@ It is advised to use the GitHub Action `docker.yml` via manual dispatch (click o
 
 ## Similar and Related Projects
 
+- [roboticslab-uc3m/teo-gz-sim-models](https://github.com/roboticslab-uc3m/teo-gz-sim-models)
 - [roboticslab-uc3m/teo-openrave-models](https://github.com/roboticslab-uc3m/teo-openrave-models)
