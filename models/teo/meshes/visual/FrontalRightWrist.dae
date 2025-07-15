@@ -35,7 +35,7 @@
     <light id="Light-light" name="Light">
       <technique_common>
         <point>
-          <color sid="color">1000 1000 1000</color>
+          <color sid="color">100 1000 1000</color>
           <constant_attenuation>1</constant_attenuation>
           <linear_attenuation>0</linear_attenuation>
           <quadratic_attenuation>0.00111109</quadratic_attenuation>
@@ -48,10 +48,10 @@
           <mode sid="mode" type="int">1</mode>
           <gamma sid="blender_gamma" type="float">1</gamma>
           <red sid="red" type="float">1</red>
-          <green sid="green" type="float">1</green>
-          <blue sid="blue" type="float">1</blue>
+          <green sid="green" type="float">0</green>
+          <blue sid="blue" type="float">0</blue>
           <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
-          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_g sid="blender_shadow_g" type="float">1</shadow_g>
           <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
           <energy sid="blender_energy" type="float">1000</energy>
           <dist sid="blender_dist" type="float">29.99998</dist>
