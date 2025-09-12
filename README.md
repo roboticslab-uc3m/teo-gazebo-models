@@ -117,5 +117,6 @@ It is advised to use the GitHub Action `docker.yml` via manual dispatch (click o
 
 ## Similar and Related Projects
 
+- [robotology-gazebo-yarp-plugins](https://github.com/robotology/gazebo-yarp-plugins)
 - [roboticslab-uc3m/teo-gz-sim-models](https://github.com/roboticslab-uc3m/teo-gz-sim-models)
 - [roboticslab-uc3m/teo-openrave-models](https://github.com/roboticslab-uc3m/teo-openrave-models)
